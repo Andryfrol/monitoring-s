@@ -1,0 +1,136 @@
+CREATE TABLE main.shtr_customer_blank (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  gos_number varchar(255) NOT NULL COMMENT 'Гос. номер авто.',
+  curr_date varchar(255) DEFAULT NULL COMMENT 'время получения данных',
+  pay_summ float(10, 2) DEFAULT NULL COMMENT 'сумма штрафа',
+  uniq_blank_id varchar(255) DEFAULT NULL COMMENT 'уникальный id штрафа в УИН',
+  blank_date varchar(255) DEFAULT NULL COMMENT 'дата указанная в постановлении',
+  description varchar(2048) DEFAULT NULL,
+  status int(11) DEFAULT 0,
+  header_shtraf varchar(255) DEFAULT NULL,
+  num_postonovlenia varchar(32) DEFAULT NULL,
+  blank_date_timestamp bigint(20) DEFAULT NULL,
+  up_time bigint(20) DEFAULT NULL,
+  articlecode text DEFAULT NULL COMMENT 'Ссылка на статью КОАП',
+  discountsize text DEFAULT NULL COMMENT 'Размер действующей скидки',
+  discountdate varchar(255) DEFAULT NULL COMMENT 'Дата, при оплате до которой действует скидка на оплату штрафа',
+  sts_number bigint(10) DEFAULT NULL,
+  location_shtr text DEFAULT NULL,
+  bankname varchar(1024) DEFAULT NULL,
+  blank_pay_status int(11) DEFAULT NULL COMMENT 'Идентификатор оплаты штрафа',
+  blank_pay_date int(11) DEFAULT NULL COMMENT 'Дата оплаты штрафа',
+  PRIMARY KEY (id),
+  INDEX num_postonovlenia (num_postonovlenia)
+)
+ENGINE = INNODB
+AUTO_INCREMENT = 2653
+AVG_ROW_LENGTH = 1122
+CHARACTER SET utf8
+COLLATE utf8_general_ci
+COMMENT = 'Данные штрафов клиентов';
+
+
+
+
+CREATE TABLE main.shtr_gosnum_sts (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  gos_number varchar(16) DEFAULT NULL COMMENT 'Гос. номер авто',
+  status int(1) DEFAULT 1 COMMENT 'Проверка на штрафы. Значение по умолчанию 1.',
+  sts_number bigint(22) DEFAULT NULL,
+  PRIMARY KEY (id),
+  UNIQUE INDEX gos_number (gos_number)
+)
+ENGINE = INNODB
+AUTO_INCREMENT = 908
+AVG_ROW_LENGTH = 1092
+CHARACTER SET utf8
+COLLATE utf8_general_ci
+COMMENT = 'Связь гос номеров и номеров СТС';
+
+
+
+
+CREATE TABLE main.shtr_payment_zakaz (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  curr_date int(11) DEFAULT NULL COMMENT 'Timestamp заказа оплаты',
+  hash_zakaz varchar(512) DEFAULT NULL COMMENT 'Подпись запроса',
+  zn varchar(255) DEFAULT NULL,
+  pin varchar(255) DEFAULT NULL,
+  status int(11) DEFAULT 0 COMMENT 'Статус заказа',
+  user_name varchar(50) DEFAULT NULL,
+  user_sername varchar(255) DEFAULT NULL,
+  user_email varchar(255) DEFAULT NULL,
+  req_err varchar(255) DEFAULT NULL,
+  req_msg text DEFAULT NULL,
+  req_sumpay varchar(255) DEFAULT NULL COMMENT 'Сумма в рублях к оплате клиентом',
+  req_refsum varchar(255) DEFAULT NULL COMMENT 'Общая сумма партнерского вознаграждения',
+  req_refdat varchar(255) DEFAULT NULL COMMENT 'Дата и время операции перевода вознагрождения партнеру',
+  num_postatnovlenia varchar(255) DEFAULT NULL COMMENT 'Номер постановления штрафа',
+  PRIMARY KEY (id),
+  UNIQUE INDEX id (id),
+  UNIQUE INDEX num_postatnovlenia (num_postatnovlenia),
+  UNIQUE INDEX zn (zn)
+)
+ENGINE = INNODB
+AUTO_INCREMENT = 7
+AVG_ROW_LENGTH = 16384
+CHARACTER SET utf8
+COLLATE utf8_general_ci
+COMMENT = 'Учет платежей';
+
+
+
+
+CREATE TABLE main.shtr_plan (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  server_id int(11) DEFAULT NULL COMMENT 'id server',
+  code_plan varchar(512) DEFAULT NULL COMMENT 'hash задания',
+  curr_date varchar(255) DEFAULT NULL COMMENT 'время поставленной задачи',
+  start_sts_id int(11) DEFAULT NULL,
+  stop_sts_id int(11) DEFAULT NULL,
+  status_plan int(11) DEFAULT 0 COMMENT 'Статус задания (0 - не выполнена, 1 - выполнено)',
+  work_time varchar(64) DEFAULT NULL COMMENT 'Время работы скрипта',
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB
+AUTO_INCREMENT = 137
+AVG_ROW_LENGTH = 2730
+CHARACTER SET utf8
+COLLATE utf8_general_ci
+COMMENT = 'таблица отвечающая за разделение задач между серверами';
+
+
+
+
+CREATE TABLE main.shtr_servers (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  ip_adress varchar(255) DEFAULT NULL,
+  status int(11) DEFAULT 1 COMMENT 'Статус активности',
+  www varchar(512) DEFAULT NULL COMMENT 'www',
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB
+AUTO_INCREMENT = 11
+AVG_ROW_LENGTH = 1638
+CHARACTER SET utf8
+COLLATE utf8_general_ci
+COMMENT = 'Серверы штрафов';
+
+
+
+
+
+
+CREATE TABLE main.shtr_update (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  curr_time varchar(255) DEFAULT NULL,
+  stop_time varchar(255) DEFAULT NULL,
+  status_insert text DEFAULT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = INNODB
+AUTO_INCREMENT = 210
+AVG_ROW_LENGTH = 963
+CHARACTER SET utf8
+COLLATE utf8_general_ci
+COMMENT = 'Время обнавления данных штрафов';

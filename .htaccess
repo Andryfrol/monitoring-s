@@ -1,0 +1,31 @@
+Options +FollowSymLinks
+
+Options -Indexes
+
+#PHP_VALUE default_charset utf-8
+DirectoryIndex index.php
+AddDefaultCharset UTF-8
+RewriteEngine on
+ErrorDocument 404 /404.php
+
+RewriteRule ^оплачено/?$ /goodpay.php
+RewriteRule ^кабинет/?$ /cabinet.php
+RewriteRule ^служба-поддержки/?$ /helpdesk.php
+RewriteRule ^подключить-мониторинг-штрафов/?$ /use.php
+RewriteRule ^проверка-штрафов-гибдд/?$ /searching.php
+RewriteRule ^тарифные-планы/?$ /tarifs.php
+RewriteRule ^о-системе-мониторинга-штрафов/?$ /about.php
+RewriteRule ^оплатить-штраф/?$ /pay.php
+RewriteRule ^выход/?$ /quit.php
+RewriteRule ^автодизайн-минусинск/?$ /auto-design.php
+RewriteRule ^задание/?$ /zadanie.php
+RewriteRule ^обработка-платежа/?$ /gobank.php
+RewriteRule ^в-кабинет/?$ /tocabinet.php
+
+
+
+RewriteRule ^export/([a-zA-Z0-9_-]+)?$ /php/excell.php?hash=$1
+RewriteRule ^printer/([a-zA-Z0-9_-]+)?$ /php/printer.php?hash=$1
+<Files robots.txt>
+  Allow from all
+</Files>

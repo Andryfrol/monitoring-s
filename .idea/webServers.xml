@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="cddb5424-3815-48f7-af3b-84b64b6feeb3" name="tw" url="http://vh62.timeweb.ru">
+        <fileTransfer host="vh62.timeweb.ru" port="22" rootFolder="/home/c/ce18538/monitoring-s/public_html" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="22" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,9 @@
+User-agent: Yandex
+Allow: /
+Sitemap: http://xn----8sbgbya0aicgcfuexg0b6d.xn--p1ai/sitemap.xml
+User-agent: Googlebot
+Allow: /
+Sitemap: http://xn----8sbgbya0aicgcfuexg0b6d.xn--p1ai/sitemap.xml
+User-agent: *
+Allow: /
+Sitemap: http://xn----8sbgbya0aicgcfuexg0b6d.xn--p1ai/sitemap.xml

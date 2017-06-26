@@ -63,7 +63,7 @@ function chengeremail() {
 
 
 function showZabilPass() {
-  jQuery('#headzabilpass').css('color','#ddd0b2');
+  jQuery('#headzabilpass').css('color','#435183');
   jQuery('.zabilpasspanel').css('display','block');
   jQuery('.hidezabilpassclose').css('display','block');
   //  - show
@@ -152,7 +152,7 @@ function addGroupTransport() {
       success: function(html) {
         jQuery('#mt_icon3').css('opacity','1');
         jQuery('#mt_icon1').css('opacity','0');
-        jQuery('#addtsspan').css('color','#a8a9ab');
+        jQuery('#addtsspan').css('color','#435183');
         jQuery('#f1trmenu').css('color', '#a8a9ab');
         jQuery('#addtsicon').css('opacity','0');
         jQuery('#tx_3uprgr').css('color','#ddd0b2');

@@ -47,7 +47,7 @@
 
           <div style='text-align: right;'>
 
-            <div class="" style="float: left; padding: 10px; cursor: default;">
+            <div class="" style="float: left; font-weight: bold; padding: 10px; cursor: default;">
               Количество найденных штрафов <span style="padding: 10px; color: #dccfb1; cursor: default;"><?=$n_new_blank_data;?></span>
 
             </div>

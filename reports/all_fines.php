@@ -64,7 +64,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
 
               <div style='text-align: right;'>
 
-                <div class="" style="float: left; padding: 10px 0; cursor: default;">
+                <div class="" style="float: left; font-weight: bold; padding: 10px 0; cursor: default;">
                   Количество найденных штрафов <span style="padding: 10px; color: #dccfb1; cursor: default;"><?=$n_new_blank_data;?></span>
                 </div>
 

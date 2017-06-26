@@ -28,13 +28,5 @@ if ($n_message_reports > 0) {
         <input type="checkbox" name="checkbox2" id="checkbox2" onChange="clickCheck2()"  class="ios-toggle" <? if($message_reports_new_fines_report){ echo "checked";};?>/>
         <label for="checkbox2" class="checkbox-label" data-off="" data-on=""></label>
       </div>
-      <br><br><br>
-      <div class="">
-        Пример ежедневного отчета (в случае если новых штрафов не полученно, отчет не отправляется)
-      </div>
-      <div class="">
-        Пример еженедельного отчета (в случае если новых штрафов за неделю не полученно, отчет всеровно отправляется)
-      </div>
-
   </div>
 </div>

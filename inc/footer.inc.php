@@ -36,6 +36,8 @@
 <script type="text/javascript" src="/js/moment.js"></script>
 <script type="text/javascript" src="/js/export_excell.js"></script>
 <script type="text/javascript" src="/js/printer.js"></script>
+<script type="text/javascript" src="/js/app/classes.js"></script>
+
 <script>
 jQuery( function() {
    jQuery( "#slider" ).slider();
@@ -56,7 +58,9 @@ jQuery(window).load(function() {
     }
 });
 </script>
-
+<?
+include_once($_SERVER['DOCUMENT_ROOT']."/analytics/google-analytics.php");
+?>
 </body>
-<?php include_once("/php/analytics.php") ?>
+
 </html>

@@ -2,7 +2,7 @@
 /******************* Background ********************/
 
 	html {
-		background-color: #161c25;
+		background-color: #fff;
 	}
 
 	#Wrapper, #Content {
@@ -312,7 +312,7 @@
 /* Content font */
 	body, ul.timeline_items, .icon_box a .desc, .icon_box a:hover .desc, .feature_list ul li a, .list_item a, .list_item a:hover,
 	.widget_recent_entries ul li a, .flat_box a, .flat_box a:hover, .story_box .desc, .content_slider.carousel  ul li a .title {
-		color: #e8e8e8;
+		color: #444;
 	}
 
 /* Theme color */
@@ -373,13 +373,13 @@
 	}
 
 /* Headings font */
-	h1, h1 a, h1 a:hover, .text-logo #logo { color: #c43f43; }
-	h2, h2 a, h2 a:hover { color: #ddd0b2; }
-	h3, h3 a, h3 a:hover { color: #ddd0b2; }
-	h4, h4 a, h4 a:hover { color: #ddd0b2; }
-	h5, h5 a, h5 a:hover { color: #ddd0b2; }
+	h1, h1 a, h1 a:hover, .text-logo #logo { color: #fff; }
+	h2, h2 a, h2 a:hover { color: #fff; }
+	h3, h3 a, h3 a:hover { color: #fff; }
+	h4, h4 a, h4 a:hover { color: #fff; }
+	h5, h5 a, h5 a:hover { color: #fff; }
 	h6, h6 a, h6 a:hover,
-	a.content_link .title { color: #ddd0b2; }
+	a.content_link .title { color: #444; }
 
 /* Highlight */
 	.dropcap, .highlight:not(.highlight_image) {
@@ -497,17 +497,18 @@
 	}
 
 	#Top_bar .menu > li > a {
-		color: #d0d1d2;
+		color: #fff;
+		cursor: pointer;
 	}
 	#Top_bar .menu > li.current-menu-item > a,
 	#Top_bar .menu > li.current_page_item > a,
 	#Top_bar .menu > li.current-menu-ancestor > a,
 	#Top_bar .menu > li.current_page_ancestor > a,
 	#Top_bar .menu > li.hover > a {
-		color: #eee1c1;
+		color: #fff;``
 	}
 	#Top_bar .menu > li a:after {
-		background: #eee1c1;
+		background: #fff;
 	}
 
 	.menu-highlight #Top_bar #menu > ul > li.current-menu-item > a,
@@ -519,10 +520,10 @@
 	}
 
 	.menu-arrow-bottom #Top_bar .menu > li > a:after {
-   		border-bottom-color: #eee1c1;
+   		border-bottom-color: #fff;
 	}
 	.menu-arrow-top #Top_bar .menu > li > a:after {
-	    border-top-color: #eee1c1;
+	    border-top-color: #fff;
 	}
 
 	.header-plain #Top_bar .menu > li.current-menu-item > a,
@@ -535,7 +536,7 @@
 	.header-plain #Top_bar .wpml-languages:hover,
 	.header-plain #Top_bar .wpml-languages ul.wpml-lang-dropdown {
 		background: #F2F2F2;
-		color: #eee1c1;
+		color: #fff;
 	}
 
 	.header-plain #Top_bar,
@@ -828,16 +829,18 @@
 
 
 
-	html{background-image:url(/images/home_kravmaga_bg1.jpg);background-repeat:repeat;background-position:center top;background-attachment:;-webkit-background-size:;background-size:}
+	html {
+		background: #f0f2f5;
+	}
 	#Wrapper,#Content,#Header_wrapper{background-color:transparent}#Wrapper{box-shadow:0 0 0 0 rgba(0, 0, 0, 0)}#Top_bar
 			#logo{padding:30px
 			0}#Top_bar
 			#menu{background:none}.header-stack
-			#Top_bar{background:url(/images/home_kravmaga_bg3.png)}.header-stack #Top_bar:not(.is-sticky){background:url(/images/home_kravmaga_header.jpg) no-repeat top center !important}#Top_bar .menu > li a:after{display:none}@media only screen and (min-width: 768px) and (max-width: 1239px){#Top_bar
-			#menu{background:url(/images/home_kravmaga_bg3.png) !important}}@media only screen and (min-width: 1240px){#Top_bar:not(.is-sticky) .menu_wrapper{text-align:center;width:100%}#Top_bar:not(.is-sticky) .menu{width:100%}#Top_bar:not(.is-sticky) .menu>li{display:inline-block;float:none}#Top_bar .menu > li > a span:not(.description){background:url(/images/home_kravmaga_border_right.png) no-repeat right center}#Top_bar .menu > li:last-child > a span:not(.description){background:none}}@media only screen and (min-width: 768px){#Top_bar:not(.is-sticky) .logo{background:url(/images/home_kravmaga_border_bottom.png) repeat-x bottom center}}.kravmaga_title{font-size:80px;line-height:80px;letter-spacing:45px;color:#f14343;font-family:Cabin Sketch}@media only screen and (max-width: 767px){.kravmaga_title{font-size:26px;line-height:26px;letter-spacing:17px}}.portfolio_group .portfolio-item
+			#Top_bar{background: #435183}.header-stack #Top_bar:not(.is-sticky){}#Top_bar .menu > li a:after{display:none}@media only screen and (min-width: 768px) and (max-width: 1239px){#Top_bar
+			#menu{background:url(/images/home_kravmaga_bg3.png) !important}}@media only screen and (min-width: 1240px){#Top_bar:not(.is-sticky) .menu_wrapper{text-align:center;width:100%}#Top_bar:not(.is-sticky) .menu{width:100%}#Top_bar:not(.is-sticky) .menu>li{display:inline-block;float:none}#Top_bar .menu > li > a span:not(.description){background:url(/images/home_kravmaga_border_right.png) no-repeat right center}#Top_bar .menu > li:last-child > a span:not(.description){background:none}}@media only screen and (min-width: 768px){#Top_bar:not(.is-sticky) .logo{}}.kravmaga_title{font-size:80px;line-height:80px;letter-spacing:45px;color:#f14343;font-family:Cabin Sketch}@media only screen and (max-width: 767px){.kravmaga_title{font-size:26px;line-height:26px;letter-spacing:17px}}.portfolio_group .portfolio-item
 			.desc{background:rgba(48,60,73,0.5)}.image_frame,.wp-caption{border-color:rgba(48, 60, 73, 0.5)}.list_item.lists_1
 			.list_left{background:url(/images/home_kravmaga_list_pattern.jpg);color:#f14343}#welcome{margin-top:-22px}
-			#Footer{background:url(/images/home_kravmaga_footer.png) no-repeat bottom center}#Footer .footer_copy
+			#Footer{background:#fff;}#Footer .footer_copy
 			.one{margin-bottom:0px;padding-top:45px} input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="url"], select, .woocommerce .quantity
 			,input[type="email"]:focus,input[type="number"]:focus,input[type="search"]:focus,input[type="tel"]:focus,input[type="url"]:focus,select:focus, input[type="submit"]{
 			);border-radius:0;color:#fff;font-weight:bold;padding:11px

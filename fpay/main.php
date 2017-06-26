@@ -10,21 +10,21 @@ $summ2 = $_GET['summ2'];
 $itog = $_GET['summ']+$_GET['summ2'];
 
 ?>
-<div class="section " style="padding-top:20px; padding-bottom:0px; background-color:; background-image:url(images/home_kravmaga_bg2.jpg); background-repeat:repeat; background-position:center top; ">
+<div class="section " style="padding-top:20px; padding-bottom:0px; background-color:; background: #fff; background-repeat:repeat; background-position:center top; ">
     <div class="section_wrapper clearfix">
         <div class="items_group clearfix panelf" style="padding-top: 20px; padding-bottom: 20px;">
             <!-- One full width row-->
             <div class="items_group">
               <div class="column one-third" style="margin-bottom: 0px;">
-                <div class="">
+                <div class="" style="padding-left: 20px; padding-top: 15px;">
                   <div class="">
-                    <h4>Оплата штрафа</h4>
+                    <h3 class="" style="font-weight: 300; font-family: 'Roboto'; color: #444;">Оплата штрафа</h3>
                   </div>
-                  <h6>Номер постановления штрафа ГИБДД</h6>
+                  <h5  style="color: #444; font-weight: 300;">Номер постановления штрафа ГИБДД</h5>
                   <?
                   if($num_post) {
                     ?>
-                    <h4 style="font-family: 'roboto';"><?=$num_post;?></h4>
+                    <h4 style="font-family: 'roboto'; color: #444;"><?=$num_post;?></h4>
                     <?
                   } else {
                     ?>
@@ -89,10 +89,10 @@ $itog = $_GET['summ']+$_GET['summ2'];
                         border: 1px solid rgba(140, 156, 172, 0.47);
                         background: rgba(140, 156, 172, 0.17);">
                       <div class="">
-                        <h3 style="color: ; font-family: 'roboto'; color: #ddd0b2; font-weight: 400;">Оплата штрафа ГИБДД</h3>
+                        <h3 style="color: ; font-family: 'roboto'; color: #444; font-weight: 400;">Оплата штрафа ГИБДД</h3>
                       </div>
                       <div class="">
-                        <h4 style="font-family: 'roboto';">№ <?=$number_post;?></h4>
+                        <h4 style="font-family: 'roboto'; color: #444;">№ <?=$number_post;?></h4>
                       </div>
                       <div class="">
                         <div class="">

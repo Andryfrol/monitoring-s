@@ -1,11 +1,10 @@
 .menudiv {
   padding: 7px 14px;
   cursor: pointer;
-  color: #e8e8e8;
-  background: rgba(140, 156, 172, 0.17);
+  color: #435183;
   display: block;
   text-decoration: none;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
 }
 
 .pointer {
@@ -65,18 +64,27 @@
 }
 
 .panelf {
-    background: rgba(140, 156, 172, 0.17);
+    /*background: rgba(0, 0, 0, 0.05);*/
     min-height: 320px;
+    border-left: 2px solid #f0f2f5;
 }
 
 .menudiv:hover {
   text-decoration: none;
-  color: rgb(209, 209, 209);
+  color: #2d2d2d;
 }
 
 .activemenudiv,
 .activemenudiv:hover {
-  color: #ddd0b2;
+  color: #2d2d2d;
+}
+
+.activemenudiv {
+  font-weight: bold;
+}
+
+.color444 {
+  color: #444;
 }
 
 .managername {
@@ -324,8 +332,8 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
   position: relative;
   text-align: center;
   padding: 5px;
-  background: #dccfb1;
-  color: #2d2d2d;
+  background: #435183;
+  color: #fff;
 }
 
 .tarifprice {
@@ -499,4 +507,58 @@ color: #e8e8e8;
 
 .text-center {
   text-align: center;
+}
+
+.h1_main {
+  font-weight: 300;
+  font-family: 'roboto';
+  padding-top: 25px;
+  font-size: 22px;
+  color: #444;
+}
+
+.roboto {
+  font-family: 'roboto';
+}
+
+
+input#sv-vo {
+  display: inline-block;
+  color: #444; font-size: 16px; border: 1px solid #ccc;
+  width: 355px;
+}
+
+#searcher-fine,
+.bly-btn {
+  padding: 9px 20px;
+  font-size: 16px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  background: #435183;
+}
+
+a:hover {
+  color: #fff;
+}
+.white-btn {
+  background: #435183; margin: 0 auto; padding: 10px 20px; font-size: 18px; color: #fff; border-radius: 0px; font-family: 'roboto'; font-weight:300;
+}
+.bgrwite {
+  background: #fff;
+}
+
+input#regcompanyemail {
+  background: rgba(255,255,255,.15); margin-bottom: 20px;
+  color: #444;
+}
+
+input#regcompanyname {
+  background: rgba(255,255,255,.15); margin-bottom: 20px;
+  color: #444;
+}
+
+input#regcompanypass1,
+input#regcompanypass2 {
+  color: #444;
 }

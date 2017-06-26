@@ -6,7 +6,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/head.inc.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
 // Записать в лог что попытка открытия несуществующей страницы
 ?>
-<div class="section " style="padding-top:40px; padding-bottom:0px; background-color:; background-image:url(images/home_kravmaga_bg2.jpg); background-repeat:repeat; background-position:center top; ">
+<div class="section " style="padding-top:40px; padding-bottom:0px; background-color:; background: #fff; background-repeat:repeat; background-position:center top; ">
     <div class="section_wrapper clearfix">
         <div class="items_group clearfix">
             <!-- One full width row-->

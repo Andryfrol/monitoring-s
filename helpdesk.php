@@ -1,31 +1,40 @@
     <?
 session_start();
 $page = 'helpdesk';
-$page_helpdesk = 'color: #ddd0b2;';
+$page_helpdesk = 'color: #fff; font-weight: bold;';
 include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/inc/head.inc.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
 ?>
-<div class="section " style="padding-top:20px; padding-bottom:0px;background-image:url(images/home_kravmaga_bg2.jpg); background-repeat:repeat; background-position:center top; ">
+<div class="section bgrwite" style="padding-top:20px; padding-bottom:0px;">
     <div class="section_wrapper clearfix panelf" style="padding-top: 20px;">
-        <div class="items_group clearfix">
+        <div class="items_group clearfix" style="">
             <!-- One full width row-->
-            <div class="column one column_column " style="text-align: center;">
-                <div class="column_attr">
-                  <h3 id="" style="margin-top: 20px; text-align: center; font-weight: 300; font-family: 'roboto';">Служба поддержки сайта<br/>
-                    <small style="font-size: 14px;">мониторинг-штрафов.рф</small>
-                  </h3>
-                </div>
-                <div class="" style="font-size: 16px; padding-lefT: 20px; color: #c8c8c8;">
-                  <span style="color: #ddd0b2; font-size: 20px; font-weight: 300;">Напишите нам</span><br/><br/>
+            <div class="" style="padding-left: 50px;">
+                <h3 id="" style="margin-top: 20px; font-weight: 300; font-family: 'roboto'; color: #444;" >Служба поддержки сайта<br/>
+                    <small style="font-size: 14px;  color: #444;">мониторинг-штрафов.рф</small>
+                </h3>
+            </div>
+            <div class="column one column_column" style="padding-left: 30%;">
+
+
+                <div class="" style="font-size: 16px; padding-left: 0px; color: #444;">
+                  <div style="color: #444; font-size: 22px; font-weight: 300;">Напишите нам</div><br/><br/>
                 </div>
                 <div class="">
-                  <input type="text" id="help_name" placeholder="* Контактное лицо, компания" style="background: rgba(255,255,255,.1); display: inline-block;">
-                  <input type="text" id="help_company" placeholder="* Email" style="background: rgba(255,255,255,.1); display: inline-block; margin-left: 20px;">
+                    <div>
+                        <div style="min-width: 250px; display: inline-block;">* Контактное лицо, компания</div>
+                        <input type="text" id="help_name" placeholder="* Контактное лицо, компания" style="color: #444; background: rgba(255,255,255,.1); display: inline-block;">
+                    </div>
+                    <div>
+                        <span style="min-width: 250px; display: inline-block;">* Email</span>
+                        <input type="text" id="help_company" placeholder="* Email" style="color: #444; background: rgba(255,255,255,.1); display: inline-block;">
+                    </div>
 
                 </div>
                 <div  style="display: inline-block; text-align: center;">
-                  <textarea name="name" id="help_text" rows="8" placeholder="* Сообщение" style="width: 484px; background: rgba(255,255,255,.1);"></textarea>
+                   <div style="width: 484px; text-align: left; padding-bottom: 15px;">* Сообщение</div>
+                  <textarea name="name" id="help_text" rows="8" placeholder="* Сообщение" style="width: 484px; color: #444; background: rgba(255,255,255,.1);"></textarea>
                 </div>
                 <div class="">
 
@@ -33,12 +42,8 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                   <div class="msgtext" style="margin-bottom: 15px; color: #c8c8c8; font-size: 16px; margin-bottom: 10px;">
 
                   </div>
-
-
-                  <div class="">
-                      <span id="go_client" style="cursor: pointer; background: #ddd0b2; margin: 0 auto; padding: 10px 20px;
-                       font-size: 18px; color: #2d2d2d; border-radius: 0px; font-family: 'roboto'; font-weight:300;">Написать</span>
-
+                  <div>
+                      <span id="go_client" class="white-btn">Написать</span>
                   </div>
 
                 </div>

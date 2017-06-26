@@ -6,15 +6,15 @@
                 <div class="sections_group">
                     <div class="entry-content">
 
-                        <div class="section " style="padding-top:20px; padding-bottom:0px; background-color:; background-image:url(images/home_kravmaga_bg2.jpg); background-repeat:repeat; background-position:center top; ">
+                        <div class="section " style="padding-top:20px; padding-bottom:0px; background-color: #fff;">
                             <div class="section_wrapper clearfix ">
                                 <div class="items_group clearfix ">
                                     <!-- One full width row-->
 
                                     <div class="items_group ">
                                       <div class="column one" style="margin-bottom: 0px;">
-                                        <div class="">
-                                          <h6><a href="/кабинет">Личный кабинет <?=$_SESSION['name'];?></a> <span style="float: right; cursor: pointer;"><a href="/выход">Выход</a></span></h6>
+                                        <div class="" style="color: #444;">
+                                          <h6><a href="/кабинет" style="font-weight: bold;">Личный кабинет <?=$_SESSION['name'];?></a> <span style="float: right; cursor: pointer;"><a href="/выход">Выход</a></span></h6>
                                         </div>
                                       </div>
                                         <div class="column one-fifth" style="min-height: 377px;">
@@ -72,8 +72,8 @@
 
                                           ?>
                                           <div class="panelf">
-                                            <div class="" style="padding: 10px 15px;">
-                                              <h6><span class="pointer" onClick="renderer('fines')">Штрафы</span> <span style="float: right; display: none;">Данные штрафов обновлены <?=date('d.m.Y',time());?></span></h6>
+                                            <div class="" style="padding: 10px 15px; background: #eceef1;">
+                                              <h6 style="margin-bottom: 0px; font-weight: bold;"><span class="pointer" onClick="renderer('fines')">Штрафы</span> <span style="float: right; display: none;">Данные штрафов обновлены <?=date('d.m.Y',time());?></span></h6>
                                             </div>
                                             <?
                                             // Получаем все СТС номера транспортных средств компании
@@ -119,7 +119,7 @@
 
                                                     <div style='text-align: right;'>
 
-                                                      <div class="" style="float: left; padding: 10px; cursor: default;">
+                                                      <div class="" style="float: left; font-weight: bold; padding: 10px; cursor: default;">
                                                         Количество найденных штрафов <span style="padding: 10px; color: #dccfb1; cursor: default;"><?=$n_new_blank_data;?></span>
 
                                                       </div>

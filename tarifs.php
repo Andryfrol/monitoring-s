@@ -1,7 +1,7 @@
 <?
 session_start();
 $page = 'tarif';
-$page_tarif = 'color: #ddd0b2;';
+$page_tarif = 'color: #fff; font-weight: bold;';
 include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/inc/head.inc.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
@@ -11,12 +11,12 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
             <div class="content_wrapper clearfix">
                 <div class="sections_group">
                     <div class="entry-content">
-                        <div class="section " style="padding-top:20px; padding-bottom:10px; background-color:; background-image:url(images/home_kravmaga_bg2.jpg); background-repeat:repeat; background-position:center top; ">
+                        <div class="section " style="padding-top:20px; padding-bottom:10px; background-color: #fff; ">
                             <div class="section_wrapper clearfix panelf">
                               <div class="column one column_column " style="margin-bottom: 3px;">
-                                  <div class="column_attr">
-                                      <h3 id="trainers" style="margin-top: 40px; text-align: center;  font-family: 'roboto'; font-weight:300;">Тарифные планы<br/>
-                                        <span style="font-size: 16px;  font-family: 'roboto'; font-weight:300;">Автоматическая система мониторинга штрафов ГИБДД </span></h3>
+                                  <div class="column_attr" style="padding-left: 40px; padding-top: 20px;">
+                                      <h3 class="h1_main">Тарифы<br/>
+                                        <span style="font-size: 16px;  font-family: 'roboto'; color: #444; font-weight:300;">Автоматическая система мониторинга штрафов ГИБДД </span></h3>
                                   </div>
                               </div>
                               <div class="column one column_column " style="text-align: center;">
@@ -27,7 +27,8 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                       Базовый
                                       <img src="/images/proddelete.png" alt="скрыть" id="closetarifs1" onClick="closeactivetarif(1)"  width="16" class="pointer" style="position: absolute; top: -18px; right: -18px; opacity: .0;">
                                     </div>
-                                    <div class="tarifprice">
+                                    <div class="tarifprice" style="border-left: 1px solid rgba(140, 156, 172, 0.47);
+    border-right: 1px solid rgba(140, 156, 172, 0.47); border-bottom: 1px solid rgba(140, 156, 172, 0.47);">
                                       50 руб./мес.
                                     </div>
                                     <div class="tarifstr">
@@ -48,7 +49,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                 <div class="tariflist" id="t2">
                                   <div class="" style="padding-left: 20px; position: relative;">
 
-                                    <div class="header-tarif" style="position: relative; background: #2f3742; color: #dccfb1;">
+                                    <div class="header-tarif" style="position: relative; background: #27ae3f; color: #fff;">
                                       Стандарт
                                       <img src="/images/proddelete.png" alt="скрыть" onClick="closeactivetarif(2)" id="closetarifs2" width="16" class="pointer" style="position: absolute; top: -18px; right: -18px; opacity: .0;">
                                       <div class="" style="position: absolute; top: -4px; right: -4px;">
@@ -57,7 +58,8 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                       </div>
 
                                     </div>
-                                    <div class="tarifprice">
+                                    <div class="tarifprice" style="border-left: 1px solid rgba(140, 156, 172, 0.47);
+    border-right: 1px solid rgba(140, 156, 172, 0.47); border-bottom: 1px solid rgba(140, 156, 172, 0.47);">
                                       100 руб./мес.
                                     </div>
                                     <div class="tarifstr">
@@ -82,7 +84,8 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                       <img src="/images/proddelete.png" alt="скрыть" class="pointer" id="closetarifs3" onClick="closeactivetarif(3)"  width="16" style="position: absolute; top: -18px; right: -18px; opacity: .0;">
 
                                     </div>
-                                    <div class="tarifprice">
+                                    <div class="tarifprice" style="border-left: 1px solid rgba(140, 156, 172, 0.47);
+    border-right: 1px solid rgba(140, 156, 172, 0.47); border-bottom: 1px solid rgba(140, 156, 172, 0.47);">
                                       150 руб./мес.
                                     </div>
                                     <div class="tarifstr">
@@ -107,7 +110,8 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                       <img src="/images/proddelete.png" alt="скрыть" id="closetarifs4" width="16" onClick="closeactivetarif(4)"  class="pointer" style="position: absolute; top: -18px; right: -18px; opacity: .0;">
 
                                     </div>
-                                    <div class="tarifprice">
+                                    <div class="tarifprice" style="border-left: 1px solid rgba(140, 156, 172, 0.47);
+    border-right: 1px solid rgba(140, 156, 172, 0.47); border-bottom: 1px solid rgba(140, 156, 172, 0.47);">
                                       250 руб./мес
                                     </div>
                                     <div class="tarifstr">
@@ -126,7 +130,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
 
                                 </div>
                               </div>
-                            <div class="" style="color: #c8c8c8; cursor: default; font-family: 'roboto'; font-weight:300; color: #ddd0b2;">
+                            <div class="" style="color: #444; cursor: default; font-size: 18px; font-family: 'roboto'; padding-top: 20px; font-weight:300;">
                               Ознакомительное использование сервиса доступно в течении 14 дней после регистрации.
                             </div>
                             </div>

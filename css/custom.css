@@ -50,6 +50,17 @@
   display: none;
 }
 
+.inlineb {
+    display: inline-block;
+}
+
+.deletetransport {
+    margin-top: 5px;
+    color:  firebrick;
+    /*font-weight: 300;*/
+    cursor: pointer;
+}
+
 .gold {
   color: #ddd0b2;
 }
@@ -75,6 +86,13 @@
 .menudiv:hover {
   text-decoration: none;
   color: #435183;
+}
+
+.redactorct {
+    padding: 3px 10px;
+    border-radius: 2px;
+    background: slategrey;
+    color: white;
 }
 
 .activemenudiv,
@@ -428,19 +446,19 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
 }
 
 ::-webkit-input-placeholder {
-color: #e8e8e8;
+color: #ccc;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-color: #e8e8e8;
+color: #ccc;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-color: #e8e8e8;
+color: #ccc;
 }
 
 :-ms-input-placeholder {
-color: #e8e8e8;
+color: #ccc;
 }
 
 .coolbutton {
@@ -616,4 +634,85 @@ a.go_to_pay:hover {
   font-weight: bold;
   color: #435183;
 
+}
+
+#modalcontaner {
+    background: rgba(0,0,0,.15);
+    position: absolute;
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+}
+
+.popup_box_container {
+    background: #fff;
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 180px;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,.35);
+    outline: none;
+}
+
+#upd_name_transport {
+    color: #444;
+    background: rgba(255,255,255,1);
+    padding: 7px 10px;
+    min-width: 287px;
+}
+
+#upd_gos_num_transport {
+    color: #444;
+    background: rgba(255,255,255,1);
+    padding: 7px 10px;
+    min-width: 287px;
+}
+.mcloser {
+    font-family: 'Ubuntu';
+    cursor: pointer;
+    border-radius: 0px;
+    float: right;
+    padding-top: 0px;
+    font-size: 14px;
+    padding-left: 7px;
+    min-width: 15px;
+    min-height: 22px;
+    background: #e04243;
+    color: white;
+}
+#upd_sts_numberdata {
+    color: #444;
+    min-width: 287px;
+    background: rgba(255,255,255,1);
+    padding: 7px 10px;
+}
+
+.trans_rpout_id_upd {
+    color: #444;
+    min-width: 287px;
+    background: rgba(255,255,255,1);
+    padding: 7px 10px;
+}
+
+.flight {
+    font-weight: 300;
+}
+
+#stsnumberadd,
+#nametransportadd,
+#gosnumbertransportadd {
+    background: rgba(255,255,255,1);
+    padding: 7px 10px;
+    min-width: 277px;
+    color: #444;
+}
+
+.transgroup  {
+    padding-left: 10px;
+    cursor: pointer;
+    min-width: 277px;
 }

@@ -35,8 +35,8 @@
       <div class="t_header" style="    border-bottom: 1px solid rgba(255,255,255,.1);
     border-radius: 2px;
     background: #eceef1;">
-        <div class="tdcellid" style="text-align: center;">
-            <small style="color: #435183;">№</small>
+        <div class="tdcellid" style="text-align: center; font-family: 'Ubuntu'; color: #435183;">
+            №
         </div>
         <div class="tdcell_t">
           Название авто
@@ -51,7 +51,7 @@
           Группа
         </div>
         <div class="tdcell_t">
-          Настройки
+<!--          Настройки-->
         </div>
       </div>
       <?
@@ -99,9 +99,8 @@
                 }
                 ?>
               </div>
-              <div class="tdcell_t">
-                <span><img  class="pointer" src='/images/interface/change_trans_icon2.png'  onClick='transportOptions("<?=$transport_id;?>")'  title='Редактировать'  style='margin-left: 5px; vertical-align: top;'></span>
-                <span><img src="/images/proddelete.png" width="14" onClick="deletTransportById(<?=$transport_id;?>)" title="Удалить транспортное средство <?=$transport_car_name;?>" style="cursor: pointer; margin-left: 15px; padding-top: 4px; vertical-align: top;" alt=""></span>
+              <div class="tdcell_t" style="text-align: right;">
+                <span class="pointer redactorct" onClick='transportOptions("<?=$transport_id;?>")' title='Редактировать'>редактировать</span>
               </div>
             </div>
             <?

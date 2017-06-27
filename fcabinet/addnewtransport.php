@@ -1,18 +1,26 @@
-<div class="" style="padding-left:25px; padding-bottom: 30px;">
+<div class="" style="padding-bottom: 30px;">
+    <div class="" style="padding: 10px; background: #f0f2f5; margin-bottom: 25px; border-bottom: 1px solid #ebebeb;">
+        <h6 style="font-weight: 400; margin-bottom: 0px; font-size: 18px; color: #435183; padding: 2px; padding-left: 10px; ">Транспортное средство
+            <span class="mcloser" title="Закрыть окно" onClick="closemodal()">
+              x
+            </span>
+        </h6>
+    </div>
+    <div style="padding-left: 50px;">
   <div class="" style="display: inline-block; width: 270px;">
-    * Номер СТС
-    <input id="stsnumberadd" type="text"  style="background: rgba(255,255,255,.2); padding: 7px 10px;">
+      <div class="flight">Номер СТС</div>
+      <input id="stsnumberadd" type="text" placeholder="Серия и номер (без пробелов)">
   </div>
   <div class=""  style="display: inline-block; width: 270px;">
-    Название транспорта
-    <input id="nametransportadd" type="text" style="background: rgba(255,255,255,.2); padding: 7px 10px;">
+      <div class="flight">Название транспорта</div>
+    <input id="nametransportadd" type="text" placeholder="Например Volvo">
   </div>
   <div class="clear">
 
   </div>
   <div class=""  style="display: inline-block; width: 270px;">
-    Гос номер
-    <input id="gosnumbertransportadd" type="text"   style="background: rgba(255,255,255,.2); padding: 7px 10px;">
+      <div class="flight"> Гос номер</div>
+      <input id="gosnumbertransportadd" type="text"  placeholder="Например А700АВ199">
   </div>
 
     <?
@@ -25,8 +33,8 @@
         ?>
         <div class=""  style="display: inline-block; width: 270px;">
 
-          Группа транспорта
-          <select class="transgroup" style="background: rgba(255,255,255,.2); padding: 7px 10px;">
+          <div class="flight">Группа транспорта</div>
+          <select class="transgroup" style="padding: 7px 10px;">
             <option value='0'>Не выбрана</option>
           <?
           for ($i = 0; $i < $n_transport_group; $i++) {
@@ -50,10 +58,11 @@
     <div class="clear">
 
     </div>
-  <div class="disactivebtn" onclick="saveTransport()" style="margin-top: 10px;">
+  <div class="groupsst-btn pointer"  onclick="saveTransport()" style="margin-right: 70px; margin-top: 10px;">
     Добавить
   </div>
   <div class="" style="clear: both;">
 
   </div>
+    </div>
 </div>

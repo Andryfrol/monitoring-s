@@ -461,6 +461,11 @@ function addManager() { // Отображение панели добавлен�
   });
 }
 
+function closemodal() {
+    jQuery('#modalcontaner').html('');
+    jQuery('#modalcontaner').css('display','none');
+}
+
 function addNewManager(){ // Добавление нового менеджера
   var fio_manager = jQuery('#fioaddermanager').val();
   var email_manager = jQuery('#emailaddermanager').val();
@@ -542,15 +547,11 @@ function addTransport()
 
       },
       success: function(html) {
-        jQuery('h6 span').css('color','#a8a9ab');
-        jQuery('#mt_icon1').css('opacity','0');
-        jQuery('#mt_icon3').css('opacity','0');
-        jQuery('#addtsspan').css('color','#ddd0b2');
-        jQuery('#addtsicon').css('opacity','1');
 
-        jQuery('.transportchanger').html(html);
-        jQuery('.trans_modal').css('display','none');
-        jQuery('.transportchanger').css('display','block')
+          jQuery('#modalcontaner').css('display', 'block');
+          var modalwindow = "<div class='popup_box_container'></div>";
+          jQuery('#modalcontaner').html(modalwindow);
+          jQuery('.popup_box_container').html(html);
       },
       error: function(html) {
 
@@ -608,7 +609,9 @@ function updateTransportData(transportId) {
       },
       success: function(html) {
         if(html=='ok') {
+          closemodal();
           renderer('transport');
+
         } else {
           alert(html);
         }
@@ -634,9 +637,11 @@ function transportOptions(tsid) {
 
       },
       success: function(html) {
-        jQuery('.trans_modal').css('display','block');
-        jQuery('.transportchanger').css('display','none');
-        jQuery('.trans_modal').html(html);
+          // Перед #Content
+          jQuery('#modalcontaner').css('display', 'block');
+          var modalwindow = "<div class='popup_box_container'></div>";
+          jQuery('#modalcontaner').html(modalwindow);
+          jQuery('.popup_box_container').html(html);
       },
       error: function(html) {
 
@@ -667,6 +672,7 @@ function saveTransport()
 
       },
       success: function(html) {
+        closemodal();
         renderer('transport');
       },
       error: function(html) {
@@ -993,6 +999,7 @@ function deletTransportById(id_transport) {
       success: function(html) {
         if(html=='ok') {
           renderer('transport');
+          closemodal();
         } else {
           alert('Недостаточно прав для удаления транспорта');
         }

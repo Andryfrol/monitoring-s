@@ -43,7 +43,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
 
                   </div>
                   <div>
-                      <span id="go_client" class="white-btn">Написать</span>
+                      <span id="go_client" class="white-btn pointer">Написать</span>
                   </div>
 
                 </div>

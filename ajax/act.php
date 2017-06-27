@@ -297,33 +297,40 @@ if($_GET['action']=='redactor_ts') {
       }
   }
   ?>
-  <div class="" style="padding-left: 20px;">
+  <div class="">
+    <div class="" style="padding: 10px; background: #f0f2f5; margin-bottom: 25px; border-bottom: 1px solid #ebebeb;">
+      <h6 style="font-weight: 400; margin-bottom: 0px; font-size: 18px; color: #435183; padding: 2px; padding-left: 10px; ">Редактор транспорта
+          <span title="Закрыть окно" style="font-family: 'Ubuntu'; cursor: pointer; border-radius: 0px;
+          float: right; padding-top: 0px; font-size: 14px; padding-left: 7px; min-width: 15px; min-height: 22px; background: #e04243; color: white;" onClick="closemodal()">
+              x
+          </span></h6>
+    </div>
+      <div style="padding-left: 50px;">
+
+
     <div class="">
-      <h6>Редактор транспорта <span style="margin-left: 80px;"><img src="/images/proddelete.png" width="16" title="Закрыть редактор транспорта" style="cursor: pointer; padding-top: 4px; vertical-align: top; margin-top: -1px;" alt="" onClick="renderer('transport')"></span></h6>
+        <div class="flight">Название транспорта</div>
+      <input type="text" id="upd_name_transport" placeholder="Название транспорта" value="<?=$transport_car_name;?>">
     </div>
     <div class="">
-      Название транспорта
-      <input type="text" id="upd_name_transport" placeholder="Название транспорта" value="<?=$transport_car_name;?>" style="background: rgba(255,255,255,.2); padding: 7px 10px;">
+        <div class="flight">Гос. номер</div>
+      <input type="text" id="upd_gos_num_transport" placeholder="Гос. номер" value="<?=$transport_gosnumber;?>">
     </div>
     <div class="">
-      Гос. номер
-      <input type="text" id="upd_gos_num_transport" placeholder="Гос. номер" value="<?=$transport_gosnumber;?>" style="background: rgba(255,255,255,.2); padding: 7px 10px;">
-    </div>
-    <div class="">
-      Номер СТС
-      <input type="text" id="upd_sts_numberdata" placeholder="Номер СТС" value="<?=$transport_sts;?>" style="background: rgba(255,255,255,.2); padding: 7px 10px;">
+        <div class="flight">Номер СТС</div>
+      <input type="text" id="upd_sts_numberdata" placeholder="Номер СТС" value="<?=$transport_sts;?>" style="">
     </div>
     <?
     $id_name_group = getUserAutoGroupsName();
     $count_group = count($id_name_group);
     if($count_group!=0) {
       ?>
-      <div class="" style="cursor: default; position: relative; display: inline-block;">
-        Группа транспорта <small>^</small>
+      <div class="flight">
+        Группа транспорта
       </div>
 
 
-      <select class="trans_rpout_id_upd" style="padding: 7px 10px; background: rgba(255,255,255,.2);">
+      <select class="pointer trans_rpout_id_upd" style="padding: 7px 10px; background: rgba(255,255,255,1);">
 
       <?
       if($transport_group_id==0) {
@@ -376,10 +383,14 @@ if($_GET['action']=='redactor_ts') {
       <?
     }
     ?>
-    <div class="disactivebtn" onclick="updateTransportData('<?=$transport_id;?>')">
-      Сохранить изменения
+    <div class="inlineb deletetransport" onclick="deletTransportById(<?=$tsid?>)" title="Удалить транспортное средство">
+        Удалить
     </div>
-    <br><br>
+    <div class="groupsst-btn pointer" style="margin-right: 64px;" onclick="updateTransportData('<?=$transport_id;?>')">
+      Сохранить
+    </div>
+    <br><br><br>
+      </div>
   </div>
   <?
 }

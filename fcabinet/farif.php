@@ -1,6 +1,6 @@
 <div class="panelf">
   <div class="" style="padding: 10px;">
-    <h6 class="pointer" style="font-weight: bold;" onClick="renderer('farif')">Тарифный план</h6>
+    <h6 class="pointer" style="font-weight: bold; font-size: 14px; color:#435183;" onClick="renderer('farif')">Тарифный план</h6>
   </div>
   <div class="">
 
@@ -42,7 +42,7 @@
               <div class="pointer" id="pt1" style="margin: 10px; color: #2d2d2d; padding: 4px 0; background: #435183; color: #fff;" onClick="payTarif(1)">
                 Активировать
               </div>
-              <div id="gopt1" class="pointer" style="color: #ddd0b2; background: rgb(47, 55, 66); margin: 10px 10px 10px 10px; display: none; padding: 4px 0;"  onClick="goPayTarif(1)">
+              <div id="gopt1" class="pointer" style="color: #fff; background: #27ae3f; margin: 10px 10px 10px 10px; display: none; padding: 4px 0;"  onClick="goPayTarif(1)">
                 Перейти к оплате
               </div>
             </div>
@@ -81,7 +81,7 @@
               <div class="pointer" id="pt2" style="margin: 10px; padding: 4px 0; background: #27ae3f; color: #fff;"  onClick="payTarif(2)">
                 Активировать
               </div>
-              <div id="gopt2" class="pointer" style="margin: 10px 10px 10px 10px; color: #2f3742; display: none; padding: 4px 0; background: #dccfb1;"  onClick="goPayTarif(2)">
+              <div id="gopt2" class="pointer" style="margin: 10px 10px 10px 10px; display: none; padding: 4px 0; color: #fff; background: #27ae3f;"  onClick="goPayTarif(2)">
                 Перейти к оплате
               </div>
             </div>
@@ -115,7 +115,7 @@
               <div class="pointer"  id="pt3" style="margin: 10px; color: #fff; padding: 4px 0; background: #435183; color: #fff;"  onClick="payTarif(3)">
                 Активировать
               </div>
-              <div id="gopt3" class="pointer" style="margin: 10px 10px 10px 10px; display: none; padding: 4px 0; color: #ddd0b2; background: rgb(47, 55, 66); "  onClick="goPayTarif(3)">
+              <div id="gopt3" class="pointer" style="margin: 10px 10px 10px 10px; display: none; padding: 4px 0; color: #fff; background: #27ae3f; "  onClick="goPayTarif(3)">
                 Перейти к оплате
               </div>
             </div>
@@ -149,7 +149,7 @@
               <div class="pointer"  id="pt4" style="margin: 10px; color: #fff; padding: 4px 0; background: #435183; color: #fff;"  onClick="payTarif(4)">
                 Активировать
               </div>
-              <div id="gopt4" class="pointer" style="margin: 10px 10px 10px 10px; display: none; padding: 4px 0; color: #ddd0b2; background: rgb(47, 55, 66); "  onClick="goPayTarif(4)">
+              <div id="gopt4" class="pointer" style="margin: 10px 10px 10px 10px; display: none; padding: 4px 0; color: #fff; background: #27ae3f;"  onClick="goPayTarif(4)">
                 Перейти к оплате
               </div>
             </div>
@@ -217,7 +217,7 @@
               <div class="pointer" id="pt1" style="margin: 10px; color: #fff; padding: 4px 0; background: #435183;" onClick="payTarif(1)">
                 Активировать
               </div>
-              <div id="gopt1" class="pointer" style="color: #ddd0b2; background: rgb(47, 55, 66); margin: 10px 10px 10px 10px; display: none; padding: 4px 0;"  onClick="goPayTarif(1)">
+              <div id="gopt1" class="pointer" style="color: #fff; background: #27ae3f; margin: 10px 10px 10px 10px; display: none; padding: 4px 0;"  onClick="goPayTarif(1)">
                 Перейти к оплате
               </div>
             </div>
@@ -297,7 +297,7 @@
               <div class="pointer" id="pt2" style="margin: 10px; color: #fff; padding: 4px 0; background: #435183;"  onClick="payTarif(2)">
                 Активировать
               </div>
-              <div id="gopt2" class="pointer" style="margin: 10px 10px 10px 10px; color: #2f3742; display: none; padding: 4px 0; background: #dccfb1;"  onClick="goPayTarif(2)">
+              <div id="gopt2" class="pointer" style="margin: 10px 10px 10px 10px; display: none; padding: 4px 0; color: #fff; background: #27ae3f;"  onClick="goPayTarif(2)">
                 Перейти к оплате
               </div>
             </div>
@@ -368,7 +368,7 @@
               <div class="pointer"  id="pt3" style="margin: 10px; color: #fff; padding: 4px 0; background: #435183;"  onClick="payTarif(3)">
                 Активировать
               </div>
-              <div id="gopt3" class="pointer" style="margin: 10px 10px 10px 10px; display: none; padding: 4px 0; color: #ddd0b2; background: rgb(47, 55, 66); "  onClick="goPayTarif(3)">
+              <div id="gopt3" class="pointer" style="margin: 10px 10px 10px 10px; display: none; padding: 4px 0; color: #fff; background: #27ae3f; "  onClick="goPayTarif(3)">
                 Перейти к оплате
               </div>
             </div>
@@ -435,10 +435,10 @@
               Группировка транспорта
             </div>
             <div class="tarifstr">
-              <div class="pointer"  id="pt4" style="margin: 10px; color: #2d2d2d; padding: 4px 0; background: #dccfb1;"  onClick="payTarif(4)">
+              <div class="pointer"  id="pt4" style="margin: 10px; color: #fff; padding: 4px 0; background: #435183;"  onClick="payTarif(4)">
                 Активировать
               </div>
-              <div id="gopt4" class="pointer" style="margin: 10px 10px 10px 10px; display: none; padding: 4px 0; color: #ddd0b2; background: rgb(47, 55, 66); "  onClick="goPayTarif(4)">
+              <div id="gopt4" class="pointer" style="margin: 10px 10px 10px 10px; display: none; padding: 4px 0;color: #fff; background: #27ae3f; "  onClick="goPayTarif(4)">
                 Перейти к оплате
               </div>
             </div>

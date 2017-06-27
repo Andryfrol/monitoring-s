@@ -27,8 +27,11 @@
 
                                                 <div class="" style="text-align: right;">
                                                     <form id="formdoor" action="/в-кабинет" method="post">
-                                                      <input type="text" placeholder="Логин" name="email" class="loginis" style="background: rgba(255,255,255,.15);display: inline-block; margin-bottom: 20px;">
+                                                        <div  style="padding-right: 196px;">email</div>
+                                                      <input type="text" placeholder="Email" name="email" class="loginis" style="background: rgba(255,255,255,.15);display: inline-block; margin-bottom: 20px;">
                                                       <div class=""></div>
+                                                        <div style="padding-right: 183px;">пароль</div>
+
                                                       <input type="password" placeholder="Пароль" name="password" class="passis" style="background: rgba(255,255,255,.15); display: inline-block;">
                                                     </form>
                                                 </div>
@@ -58,18 +61,22 @@
                                         <div class="column_attr">
                                             <div style="padding: 20px 8% 20px 4%;">
                                                 <h4 style="color: #444; font-weight: 300; font-family: 'Roboto';">Регистрация</h4>
+                                                    <div  style="">название компании или ИП</div>
                                                   <input type="text" id="regcompanyname" placeholder="* Название компании или ИП">
                                                 <div class="">
                                                 </div>
+                                                  <div>email</div>
                                                   <input type="text" id="regcompanyemail" placeholder="* Email">
                                                 <div class="">
                                                 </div>
+                                                  <div>пароль</div>
                                                   <input type="password" id="regcompanypass1" placeholder="* Пароль" style="background: rgba(255,255,255,.15); margin-bottom: 20px;">
                                                 <div class="">
                                                 </div>
-                                                  <input type="password" id="regcompanypass2" placeholder="* Повтор пароля" style=" background: rgba(255,255,255,.15); margin-bottom: 20px;">
+                                                <div>повторите пароль</div>
+                                                <input type="password" id="regcompanypass2" placeholder="* Повтор пароля" style=" background: rgba(255,255,255,.15); margin-bottom: 20px;">
                                                 <div class="">
-                                                  <button type="button" name="button" id="register" style="border-radius: 0px; width: 230px; margin-top: 10px; background: #435183; color: #fff;" onclick="registerNewUser()">Регистрация</button>
+<!--                                                  <button type="button" name="button" id="register" style="border-radius: 0px; width: 230px; margin-top: 10px; background: #435183; color: #fff;" onclick="registerNewUser()">Регистрация</button>-->
                                                 </div>
                                             </div>
                                         </div>

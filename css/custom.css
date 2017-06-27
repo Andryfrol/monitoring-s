@@ -12,14 +12,17 @@
 }
 
 .button-round {
-   border-left: 2px solid #ddd0b2;background: rgba(255,255,255,.1); cursor: pointer; padding: 5px 10px; border-radius: 50px;
+  background: #f0f2f5;
+  cursor: pointer; padding: 5px 10px; border-radius: 50px;
   transition: .17s;
   border-radius: 0;
+  font-weight: bold;
+  color: #435183;
   padding-left: 10px;
 }
 .button-round:hover {
   transition: .17s;
-   background: rgba(255,255,255,.2);
+   background: #f0f2f5;
 }
 
 .right-arrow-btn {
@@ -28,7 +31,7 @@
 }
 
 .button-round:hover .right-arrow-btn {
-  opacity: .77;
+  opacity: .9;
   transition: .17s;
 }
 
@@ -66,17 +69,17 @@
 .panelf {
     /*background: rgba(0, 0, 0, 0.05);*/
     min-height: 320px;
-    border-left: 2px solid #f0f2f5;
+    /*border-left: 2px solid #f0f2f5;*/
 }
 
 .menudiv:hover {
   text-decoration: none;
-  color: #2d2d2d;
+  color: #435183;
 }
 
 .activemenudiv,
 .activemenudiv:hover {
-  color: #2d2d2d;
+  color: #435183;
 }
 
 .activemenudiv {
@@ -323,9 +326,18 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
   border-left: 3px solid  rgba(37, 41, 48, 0);
   line-height: 4;
 }
+
+.balanceadditem:hover {
+  background: #f0f2f5;
+}
 .balanceadditem_act {
-  background: rgba(37, 41, 48, 0.51);
-  border-left: 3px solid #ddd0b2;
+  background: rgb(67, 81, 131);
+  border-left: 3px solid #37659c;
+  color: #fff;
+}
+
+.balanceadditem_act.balanceadditem:hover {
+  background: rgb(67, 81, 131);
 }
 
 .header-tarif {
@@ -376,14 +388,22 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
 }
 
 .btnexport {
-  margin-right: 10px;
+  margin-top: 5px;
   display: inline-block;
-  background-image: url(/images/interface/disactive.png);
+  cursor: pointer;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  background: #435183;
+  color: #fff;
   transition: .17s;
-  height: 42px;
-  width: 192px;
-  line-height: 3;
+  height: 32px;
+  width: 142px;
+  line-height: 2.4;
   text-align: center;
+}
+.btnexport:hover {
+
 }
 
 .disactivebtn,
@@ -398,7 +418,7 @@ font-family:Helvetica Neue,helvetica,arial,verdana,sans-serif;
   text-align: center;
 }
 
-.btnexport:hover,
+
 .disactivebtn:hover,
 .sbtn:hover {
   cursor: pointer;
@@ -561,4 +581,39 @@ input#regcompanyname {
 input#regcompanypass1,
 input#regcompanypass2 {
   color: #444;
+}
+
+a.go_to_pay {
+  padding: 3px 10px;
+  border-radius: 2px;
+  background: green;
+  color: white;
+  font-weigth: bold;
+}
+
+a.go_to_pay:hover {
+  text-decoration: none;
+}
+
+.addst-btn,
+.groupsst-btn {
+  float: right;
+  display: inline-block; background: #435183; color: #fff; margin-left: 3px; margin-right: 1px; vertical-align: top; position: relative;
+  padding: 6px 15px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+.addstbtn {
+  display: inline-block; background: #435183; color: #fff; margin-left: 3px; margin-right: 1px; vertical-align: top; position: relative;
+  padding: 6px 15px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+.t_header .tdcell_t,
+.t_header tdcellid {
+  font-weight: bold;
+  color: #435183;
+
 }

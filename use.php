@@ -19,7 +19,8 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                               <div class="column one column_column ">
                                   <div class="column_attr">
                                     <br><br>
-                                      <h1 id="trainers" style="text-align: left; color: #444; margin-top: 0px; padding-left: 30px; margin-bottom: 35px; font-family: 'roboto'; font-weight:300;">Как подключить систему мониторинга штрафов?</h1>
+                                      <h1 id="trainers" style="text-align: left; color: #444; margin-top: 0px; padding-left: 30px; margin-bottom: 35px;
+                                      font-family: 'roboto'; font-weight:300; font-size: 22px;">Как подключить систему мониторинга штрафов?</h1>
                                   </div>
                                   <div class="" style="padding-left:20px; text-align: center;">
                                     <div class="" style="color: #444; padding: 5px 0;  font-size: 16px;  font-family: 'roboto'; font-weight:300;">

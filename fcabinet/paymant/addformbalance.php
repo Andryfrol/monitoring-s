@@ -11,8 +11,8 @@
     </div>
   </div>
   <div class="" style="">
-    Сумма к оплате <span id="koplate">200</span> руб.<button type="button" name="button" onClick="loadpayform()" style="border-radius: 0px; margin-top: 0px; background: rgba(37, 41, 48, 0.51); margin-left: 45px; padding: 10px 15px;">Перейти к оплате</button>
-
+      <span style="font-size: 14px;">Сумма к оплате <span id="koplate">200</span> руб.</span><br/>
+      <button type="button" name="button" onClick="loadpayform()" style="border-radius: 2px; margin-top: 25px; background: #435183; margin-left: 0px; padding: 10px 15px;">Перейти к оплате</button>
   </div>
   <div class="">
 

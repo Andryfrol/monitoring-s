@@ -14,20 +14,23 @@
                                     <div class="items_group ">
                                       <div class="column one" style="margin-bottom: 0px;">
                                         <div class="" style="color: #444;">
-                                          <h6><a href="/кабинет" style="font-weight: bold;">Личный кабинет <?=$_SESSION['name'];?></a> <span style="float: right; cursor: pointer;"><a href="/выход">Выход</a></span></h6>
+                                          <h6><a href="/кабинет" style="font-weight: bold; color: #435183; font-size: 14px;">Личный кабинет <?=$_SESSION['name'];?></a>
+
+                                          </h6>
                                         </div>
                                       </div>
                                         <div class="column one-fifth" style="min-height: 377px;">
 
-                                            <a href="#штрафы" class="menudiv activemenudiv" name="fines">
+                                            <a href="/кабинет" class="menudiv activemenudiv" name="sfines">
                                                 Штрафы
-                                            </a>
-                                            <a href="#мойтранспорт" class="menudiv" name="transport">
-                                              Мой транспорт
                                             </a>
                                             <a href="#оповещения" class="menudiv" name="messagers">
                                                 Оповещения
                                             </a>
+                                            <a href="#мойтранспорт" class="menudiv" name="transport">
+                                              Мой транспорт
+                                            </a>
+
                                             <a href="#отчеты" class="menudiv" name="reports">
                                                 Отчеты
                                             </a>
@@ -40,9 +43,14 @@
                                             <a href="#farifs" class="menudiv" name="farif">
                                               Тариф
                                             </a>
-                                            <a href="#option" class="menudiv" name="options">
+                                            <!--<a href="#option" class="menudiv" name="options">
                                               Настройки
+                                            </a>-->
+                                            <br/>
+                                            <a href="/выход" class="menudiv" name="xxxxxxoptions">
+                                                Выход
                                             </a>
+
                                             <?
                                             if($_SESSION['admin']==1) {
                                               ?>
@@ -72,9 +80,7 @@
 
                                           ?>
                                           <div class="panelf">
-                                            <div class="" style="padding: 10px 15px; background: #eceef1;">
-                                              <h6 style="margin-bottom: 0px; font-weight: bold;"><span class="pointer" onClick="renderer('fines')">Штрафы</span> <span style="float: right; display: none;">Данные штрафов обновлены <?=date('d.m.Y',time());?></span></h6>
-                                            </div>
+
                                             <?
                                             // Получаем все СТС номера транспортных средств компании
                                             $q_transport = sprintf("SELECT * FROM transport WHERE user_id = '".$_SESSION['user_id']."'");
@@ -119,40 +125,55 @@
 
                                                     <div style='text-align: right;'>
 
-                                                      <div class="" style="float: left; font-weight: bold; padding: 10px; cursor: default;">
-                                                        Количество найденных штрафов <span style="padding: 10px; color: #dccfb1; cursor: default;"><?=$n_new_blank_data;?></span>
+                                                      <div class="" style="float: left; font-weight: bold; padding: 10px; color: #435183;  cursor: default;">
+                                                        Количество найденных штрафов <span style="padding: 10px; cursor: default;"><?=$n_new_blank_data;?></span>
 
                                                       </div>
 
-
+                                                      <div class="btnexport" onclick="" style="max-width: 90px;">
+                                                        Печать
+                                                      </div>
                                                       <div class="btnexport" onclick="exportDataToExcell()">
-                                                        Экспортировать в Excell
+                                                        Экспорт в Excell
                                                       </div>
                                                       <div class="clear">
 
                                                       </div>
                                                     </div>
                                                     <div class="" style="border-bottom: 1px solid rgba(255,255,255,.1);"></div>
-                                                    <div class="" style="border-bottom: 1px solid rgba(255,255,255,.1);">
+                                                    <div class="" style="border-bottom: 1px solid rgba(255,255,255,.1); border-radius: 2px; background: #eceef1;">
                                                       <div class="tdcell" style="width: 80px;">
-                                                        Дата
+                                                        <strong style=" color: #435183;">
+                                                            Дата
+                                                        </strong>
                                                       </div>
                                                       <div class="tdcell">
+                                                          <strong style=" color: #435183;">
                                                         Гос номер
+                                                          </strong>
                                                       </div>
                                                       <div class="tdcell">
+                                                          <strong style=" color: #435183;">
                                                         Сумма штрафа
+                                                          </strong>
                                                       </div>
                                                       <div class="tdcell">
+                                                          <strong style=" color: #435183;">
                                                         Группа
+                                                          </strong>
                                                       </div>
                                                       <div class="tdcell">
+                                                          <strong style=" color: #435183;">
                                                         Номер СТС
+                                                          </strong>
                                                       </div>
                                                       <div class="tdcell_post">
+                                                          <strong style=" color: #435183;">
                                                          Постановление
+                                                          </strong>
                                                       </div>
                                                       <div class="tdcell" style="width: 80px;">
+
                                                       </div>
                                                     </div>
                                                     <?
@@ -211,8 +232,8 @@
                                                           <div class="tdcell_post">
                                                             <?=$new_blank_data_l_unic_num_shtr;?>
                                                           </div>
-                                                          <div class="tdcell" style="width: 80px;">
-                                                            <a target="_blank" href="/оплатить-штраф?num=<?=$new_blank_data_l_unic_num_shtr;?>&go=pay&summ=<?=$new_blank_data_b_sum;?>&summ2=<?=$new_blank_data_feesrv;?>" style="color: #c8c8c8;">Оплатить</a>
+                                                          <div class="tdcell" style="width: 88px; text-align: right;">
+                                                            <a class="go_to_pay" target="_blank" href="/оплатить-штраф?num=<?=$new_blank_data_l_unic_num_shtr;?>&go=pay&summ=<?=$new_blank_data_b_sum;?>&summ2=<?=$new_blank_data_feesrv;?>">оплатить</a>
                                                           </div>
                                                         </div>
 

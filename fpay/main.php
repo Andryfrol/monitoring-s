@@ -54,24 +54,29 @@ $itog = $_GET['summ']+$_GET['summ2'];
                       font-family: 'roboto';
                     }
                     .form-style {
-                      background: rgba(255,255,255,.15);
+                      background: #fff;
                       display: inline-block;
-                      margin-bottom: 20px; width: 300px; border: 0px; padding: 10px 15px;
+                      margin-bottom: 10px; width: 300px; border: 0px; padding: 10px 15px;
+                    }
+
+                    input:focus,
+                    input:active {
+                        background: #fff;
                     }
                     ::-webkit-input-placeholder {
-                    color: #e8e8e8;
+                    color: #ccc;
                     }
 
                     :-moz-placeholder { /* Firefox 18- */
-                    color: #e8e8e8;
+                    color: #ccc;
                     }
 
                     ::-moz-placeholder {  /* Firefox 19+ */
-                    color: #e8e8e8;
+                    color: #ccc;
                     }
 
                     :-ms-input-placeholder {
-                    color: #e8e8e8;
+                    color: #ccc;
                     }
 
                     </style>
@@ -86,35 +91,36 @@ $itog = $_GET['summ']+$_GET['summ2'];
                     ?>
                     <div style="border: 1px solid #ccc; display: inline-block; padding: 20px;
                     margin-left: 20px;
-                        border: 1px solid rgba(140, 156, 172, 0.47);
-                        background: rgba(140, 156, 172, 0.17);">
+                        border: 1px solid #ebebeb;
+                        background: rgba(140, 156, 172, 0.07);">
                       <div class="">
-                        <h3 style="color: ; font-family: 'roboto'; color: #444; font-weight: 400;">Оплата штрафа ГИБДД</h3>
+                        <h3 style="color: ; font-family: 'roboto'; color: #444; font-weight: 300;">Оплата штрафа ГИБДД</h3>
                       </div>
                       <div class="">
                         <h4 style="font-family: 'roboto'; color: #444;">№ <?=$number_post;?></h4>
                       </div>
                       <div class="">
+                          <div style="color: #444;">Фамилия</div>
                         <div class="">
-                          <input type="text" id="sname" class="form-style" style="width: 300px;" placeholder="Фамилия">
+                          <input type="text" id="sname" class="form-style" style="color: #444; border: 1px solid #ebebeb; width: 300px;" placeholder="Фамилия">
                         </div>
                       </div>
                       <div class="">
-
+                        <div style="color: #444;">Имя</div>
                         <div class="">
-                          <input type="text" id="fname" class="form-style" style="width: 300px;" placeholder="Имя">
+                          <input type="text" id="fname" class="form-style" style="color: #444; border: 1px solid #ebebeb; width: 300px;" placeholder="Имя">
                         </div>
                       </div>
                       <div class="">
-
+                        <div style="color: #444;">Email</div>
                         <div class="">
-                          <input type="text" id="email" class="form-style" style="width: 300px;" placeholder="Email" style="">
+                          <input type="text" id="email" class="form-style" style="width: 300px; border: 1px solid #ebebeb; color: #444;" placeholder="Email" style="">
                         </div>
                       </div>
-                      <div class="" style="font-size: 14px;">
+                      <div class="" style="font-size: 14px; color: #444;">
                         Сумма штрафа <?=$_GET['summ'];?> руб., комиссия: <?=$_GET['summ2'];?> руб.
                       </div>
-                      <div class=""  style="font-size: 18px; margin-top: 8px;">
+                      <div class=""  style="color: #444; font-size: 18px; margin-top: 8px;">
                         Сумма к оплате<br/>
                         <?
                         $itog = $_GET['summ']+$_GET['summ2'];
@@ -122,12 +128,13 @@ $itog = $_GET['summ']+$_GET['summ2'];
                       с учетом комиссии: <?=$itog;?> руб.
                       </div>
                       <div class="" style="margin-top: 10px; padding-left: 40px; font-size: 14px;">
-                        <lable for="ok_ysl" style="cursor: pointer;"><input type="checkbox" id="ok_ysl" name="" value="" style="margin-left: -25px;">&nbsp;&nbsp;&nbsp;Я принимаю условия</lable><br/><small>
-                        <a target="_blank" style="color:#ddd0b2;" href="http://xn----8sbgbya0aicgcfuexg0b6d.xn--p1ai/соглашение-оплата-штрафов-гибдд.pdf
+                        <lable for="ok_ysl" style="cursor: pointer;  color: #444;"><input type="checkbox" id="ok_ysl" name="" value="" style="margin-left: -25px;">&nbsp;&nbsp;&nbsp;Я принимаю условия</lable><br/><small>
+                        <a target="_blank" style="color:#444;" href="http://xn----8sbgbya0aicgcfuexg0b6d.xn--p1ai/соглашение-оплата-штрафов-гибдд.pdf
                         ">"cоглашения о предоставлении услуг"</a></small>
 
                       </div>
-                      <div onclick="go_to_bank()" class="gotobank" style="background: #ddd0b2; padding: 10px; width: 280px; text-align: center; color: #2d2d2d; cursor: pointer; margin-top: 15px; font-family: 'roboto';">
+                      <div onclick="go_to_bank()" class="gotobank" style="background: #435183; color: #fff;
+                      padding: 10px; width: 280px; text-align: center; cursor: pointer; font-size: 15px; margin-top: 15px; font-family: 'roboto';">
                         Оплатить
                       </div>
                       <div class="ysloviaopl" style="text-align: center; padding-top: 15px; opacity: 0; color: #ddd0b2;">

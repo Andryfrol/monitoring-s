@@ -3,17 +3,18 @@
 
   <div class="" style="padding: 10px;  vertical-align: top;">
     <h6 style="display: inline-block; margin-right: 5px;  vertical-align: top; position: relative;" class="pointer" onclick="renderer('transport')">
-      <img id="mt_icon1" src="/images/interface/active_arrow.png" width="15" style="position: absolute; top: 0px; left: -0px; margin-top: 5px; margin-right: 2px; vertical-align: top;" alt="">
-      <span style="vertical-align: top; margin-left: 25px; " id="f1trmenu">Мой транспорт</span>
+<!--      <img id="mt_icon1" src="/images/interface/active_arrow.png" width="15" style="position: absolute; top: 0px; left: -0px; margin-top: 5px; margin-right: 2px; vertical-align: top;" alt="">-->
+      <span style="vertical-align: top; margin-left: 0px; font-weight: bold; color: #435183; font-size: 14px; padding-top: 10px; " id="f1trmenu">Мой транспорт</span>
     </h6>
-    <h6 onClick="addTransport()" style="display: inline-block; color: #a8a9ab; margin-left: 35px; margin-right: 5px; vertical-align: top; position: relative;" class="pointer">
+    <h6 onClick="addTransport()" class="pointer addst-btn">
       <img id="addtsicon" src="/images/interface/active_arrow.png" width="15" style="opacity: 0;  position: absolute; top: 0px; left: -25px; margin-top: 5px; margin-right: 2px; vertical-align: top;" alt="">
       <span id="addtsspan">Добавить транспорт</span>
     </h6>
-    <h6 onClick="addGroupTransport()" class="pointer" style=" color: #a8a9ab; display: inline-block; margin-left: 35px; vertical-align: top;  position: relative;">
+    <h6 onClick="addGroupTransport()" class="pointer groupsst-btn">
       <img id="mt_icon3" src="/images/interface/active_arrow.png" width="15" style="opacity: 0; position: absolute; top: 0px; left: -25px; margin-top: 5px; margin-right: 2px; vertical-align: top;" alt="">
       <span id="tx_3uprgr">Управление группами</span>
     </h6>
+      <div class="clearfix"></div>
   </div>
   <div class="">
 
@@ -31,9 +32,11 @@
 
     if ($n_transport > 0) {
       ?>
-      <div class="" style="border-bottom: 1px solid rgba(255,255,255,.1);border-top: 1px solid rgba(255,255,255,.1);">
+      <div class="t_header" style="    border-bottom: 1px solid rgba(255,255,255,.1);
+    border-radius: 2px;
+    background: #eceef1;">
         <div class="tdcellid" style="text-align: center;">
-          №
+            <small style="color: #435183;">№</small>
         </div>
         <div class="tdcell_t">
           Название авто

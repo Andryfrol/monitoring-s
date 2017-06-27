@@ -49,7 +49,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                     </div>
                 </div>
             </div>
-            <!-- One Third (1/3) Column -->
+            <!-- One Third (1/3) Column
             <div class="column one-third column_list ">
                 <div class="list_item lists_1 clearfix">
 
@@ -60,7 +60,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             <!-- Page devider -->
             <!-- One full width row-->
             <div class="column one column_divider ">
@@ -97,11 +97,12 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                     <div class="list_right">
                         <h4 style="font-family: 'roboto';  color: #444;">Экономия денег</h4 style="font-family: 'roboto';">
                         <div class="desc" style="font-family: 'roboto';  color: #444; font-weight:300; ">
-                            Вовремя получая информацию о нарушениях, вы экономите свои деньги.
+                            Вовремя получая информацию о нарушениях, вы контролируете свой бизнес и экономите деньги.
                         </div>
                     </div>
                 </div>
             </div>
+            <!--
             <div class="column one column_column ">
                 <div class="column_attr">
                   <h3 id="" style="margin-top: 20px; text-align: center; font-weight: 300; font-family: 'roboto';  color: #444;">FAQ</h3>
@@ -122,7 +123,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
             <div class="" style="clear: both;">
 
             </div>
-
+            -->
 
         </div>
     </div>

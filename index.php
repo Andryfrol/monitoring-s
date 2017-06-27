@@ -113,9 +113,16 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                 </div>
                             </div>
                         </div>
-
-
+                        <div style="background: #fff; margin-top: 0px;  padding-left: 80px;">
+                            <a href="http://www.gibdd.ru/" target="_blank">
+                                <img src="/images/logo-gibdd.png" width="40" style="margin-right: 20px;"/>
+                            </a>
+                            <a href="http://www.visa.com.ru" target="_blank">
+                                <img src="https://themeshop.in/assets/img/site/verified-by-visa.png" width="60" />
+                            </a>
+                        </div>
                     </div>
+
                 </div>
             </div>
         </div>

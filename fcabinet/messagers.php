@@ -12,7 +12,12 @@ if ($n_message_reports > 0) {
 }
 ?>
 <div class="panelf">
+    <div>
+        <strong style="color: #435183;
+    font-size: 14px;">Оповещения</strong>
+    </div>
   <div class="" style="padding: 10px; padding-top: 20px;">
+
     <div class="" style="padding:10px; display: inline-block; vertical-align: top;">
       Получать еженедельный отчет на email
     </div>

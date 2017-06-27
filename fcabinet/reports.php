@@ -1,9 +1,9 @@
 
 <div class="panelf" style="">
-  <div class="" style="padding: 15px 15px 0 15px;">
+  <div class="" style="padding: 0px 15px 0 15px;">
     <div class="">
       <h6>
-        <span onClick="renderer('reports')" class="header_report_1 pointer">Отчеты </span>&nbsp;&nbsp;&nbsp;
+        <span onClick="renderer('reports')" class="header_report_1 pointer" style="font-weight: bold; font-size: 14px; color: #435183;">Отчеты </span>&nbsp;&nbsp;&nbsp;
         <span class="i_name_otchet" onClick="reportPoGruppe()"></span>
         <span class="postroinnii_otshet">Отчет</span>
 
@@ -13,10 +13,8 @@
 
   <div class="i_report_block_1">
     <div class="reportchanger" style="display: inline-block; width: 48%;">
-      <div class="" style="padding-left: 15px; color: #c8c8c8; background: rgba(255,255,255,.1); padding: 10px; border-left: 2px solid #ddd0b2">
-          Отчеты помогают увидеть тенденцию получения штрафов<br/> по группам ТС или отдельному ТС, за определенный период.
-      </div>
-      <div class="" style="padding: 0px; padding-top: 20px;">
+
+      <div class="" style="padding: 0px; padding-top: 10px;">
         <div class="" style="padding: 5px 0; ">
           <div class="button-round" onClick="reportPoGruppe()">
             <img src="/images/bars-chart.png" alt="" class="colored-image" style="float: left;  margin-right: 10px; width: 22px;">
@@ -42,16 +40,16 @@
         </div>
       </div>
     </div>
-    <div class="reportChanger" style="display: inline-block; width: 48%; vertical-align: top;"  >
+    <div class="reportChanger" style="display: inline-block; width: 48%; vertical-align: top; padding-top: 14px; font-size: 14px;"  >
         <div class="" style="padding-left: 20px;">
-          Отчет <span style="color: #ddd0b2;">по группе</span> транспортных средств:<br/>
+          Отчет <span style="font-weight: bold; color: #435183;">по группе</span> транспортных средств:<br/>
           - незаменим при мониторинге штрафов филиалов компании, позволяет наглядно проанализировать ситуацию.
           <br/><br/>
-          Отчет <span style="color: #ddd0b2;">по всем</span> найденным штрафам:<br/>
+          Отчет <span style="font-weight: bold; color: #435183;">по всем</span> найденным штрафам:<br/>
           - выводит все найденные неоплаченые штрафы по всем вашим транспортным средствам, позволяет отправить данные на печать или сохранить в формате Excell.
           <br/><br/>
-          Отчет <span style="color: #ddd0b2;">по отдельным</span> автомобилям:<br/>
-          - позволяет выбрать только необходимые транспортные средства для построения отчета и выгрузки данных по штрафам или напечатать их.
+          Отчет <span style="font-weight: bold; color: #435183;">по отдельным</span> автомобилям:<br/>
+          - позволяет выбрать только необходимые транспортные средства для построения отчета и выгрузки данных по штрафам
 
         </div>
     </div>

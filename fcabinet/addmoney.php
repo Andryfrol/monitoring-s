@@ -3,16 +3,18 @@ $balance = userBalance();
 ?>
 <div class="panelf">
   <div class="" style="padding: 10px;">
+
     <h6>
-      <span class="pointer" onClick="renderer('addmoney')" style="">Баланc</span>
-      <span style="margin-left: 30px;" class="pointer" onClick="popolnenie()">Пополнить баланс</span>
-      <span style="margin-left: 30px;" class="pointer" onClick="infoPay()">Платежи</span>
+      <span class="pointer" onClick="renderer('addmoney')" style="color: #435183; font-weight: bold; font-size: 14px;">Баланc</span>
+
+      <span style="margin-left: 30px;" class="pointer addst-btn" onClick="infoPay()">Платежи</span>
     </h6>
     <div class="balancechanger">
 
       <div class="" style=" margin-bottom: 15px; padding-bottom: 10px;">
-        <h4 style="font-family: 'roboto';">Ваш баланс <?=$balance;?> руб.</h4>
-        <div class="">
+        <h4 style="font-family: 'roboto'; color: #444;">Ваш баланс <?=$balance;?> руб.</h4>
+          <div><span style="margin-left: -2px;" class="pointer addstbtn" onClick="popolnenie()">Пополнить баланс</span></div>
+        <div class="" style="margin-top: 30px;">
           Дата оканчания абонентского обслуживани <?=last_day_ao();?>
         </div>
 

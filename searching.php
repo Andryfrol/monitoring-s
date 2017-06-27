@@ -18,12 +18,9 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                         <div class="section " style="padding-top:20px; padding-bottom:0px; background: #fff;">
                             <div class="section_wrapper clearfix" >
                                 <div class="items_group clearfix panelf">
-                                    <!-- One full width row-->
-
                                     <div class="items_group">
                                       <div class="column one-third " style=" padding-bottom: 0px; margin-bottom: 0px; margin-top: 20px;">
-                                        <div class="" style="padding: 25px 15px;">
-
+                                        <div class="" style="padding: 5px 15px;">
                                         <div class="">
                                           <h4 class="h1_main" style=" font-family: 'roboto'; font-weight:300;">Проверка штрафов ГИБДД</h4>
                                         </div>
@@ -34,7 +31,6 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                           </label>
                                         </div>
                                         <div class="errorlenmsg" style="min-height: 22px; padding-top: 7px;">
-
                                         </div>
                                         <div class="" style="margin-top: 0px;">
                                             <div style="padding-bottom: 3px;">Введите серию и номер СТС (без пробелов)</div>
@@ -49,19 +45,13 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                             Поиск штрафов
                                           </div>
                                         </div>
-
-
                                       </div>
-
-
                                       </div>
                                       <div class="column two-third" style="margin-bottom: 0px;">
                                         <h4 style="opacity: 0;">Результаты поиска штрафов</h4>
-                                          <iframe id="myIframe" style=" margin-left: -84px; margin-top: -28px; width: 1000px; height: 400px;" src=""></iframe>
+                                          <iframe id="myIframe" style=" margin-left: -84px; margin-top: -28px; min-width: 1000px; overflow-x: hidden; height: 400px;" src=""></iframe>
                                       </div>
-
                                     </div>
-
                                 </div>
                             </div>
                         </div>

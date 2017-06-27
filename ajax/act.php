@@ -19,7 +19,7 @@ if($_GET['action']=='plateji') {
   $r_pay_history = mysql_query($q_pay_history);
   $n_pay_history = mysql_numrows($r_pay_history);
   ?>
-  <div class="gold" style="margin-bottom: 5px;">
+  <div style="margin-bottom: 5px;">
     Платежи
   </div>
 

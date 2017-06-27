@@ -1,6 +1,6 @@
 <div class="panelf">
-  <div class="" style="padding: 10px 15px;">
-    <h6><span class="pointer" onClick="renderer('fines')">Штрафы</span>
+  <div class="" style="padding: 10px 15px; background: #eceef1;">
+    <h6 style="margin-bottom: 0px;"><span class="pointer" style="font-weight: bold;" onClick="renderer('fines')">Штрафы</span>
       <span style="float: right; display: none;">Данные штрафов обновлены <?=date('d.m.Y',time());?></span></h6>
   </div>
   <?

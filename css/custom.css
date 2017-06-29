@@ -45,10 +45,11 @@
   display: none;
 }
 
-.postroinnii_otshet {
-  margin-left: 15px;
-  display: none;
+.i_name_otchet2 {
+  cursor: pointer;
 }
+
+
 
 .inlineb {
     display: inline-block;
@@ -61,9 +62,6 @@
     cursor: pointer;
 }
 
-.gold {
-  color: #ddd0b2;
-}
 
 .cach_report_step_2 .l,
 .cach_report_step_2 .r {
@@ -715,4 +713,93 @@ a.go_to_pay:hover {
     padding-left: 10px;
     cursor: pointer;
     min-width: 277px;
+}
+
+.addnewtsgroup {
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-block;
+  float: right;
+  background: #435183;
+  color: #fff;
+  margin-left: 10px;
+  margin-top: 15px;
+  margin-right: 10px;
+  vertical-align: top;
+  position: relative;
+  padding: 6px 15px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+.addnewtsgroupsaver {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  background: #435183;
+  color: #fff;
+  margin-left: 20px;
+  margin-top: 0px;
+  min-width: 80px;
+  text-align: center;
+  margin-right: 10px;
+  vertical-align: top;
+  position: relative;
+  padding: 6px 15px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+.saverupdgr {
+  cursor: pointer;
+  display: inline-block;
+  float: right;
+  background: #13bf11;
+  color: #fff;
+  margin-left: 0px;
+  margin-top: 0px;
+  text-align: center;
+  margin-right: 0px;
+  vertical-align: top;
+  position: relative;
+  padding: 4px 11px;
+  font-size: 14px;
+  border-radius: 2px;
+}
+
+input.newgropname {
+  display: inline-block;
+  margin-left: 15px;
+  padding: 9px 7px;
+  color: #444!important;
+}
+
+
+.gold {
+  font-weight: bold;
+  color: #435183;
+}
+
+.postroinnii_otshet {
+  color: #435183;
+  font-weight: bold;
+  margin-left: 15px;
+  display: none;
+}
+
+.text-report-ll {
+  margin-left: 15px;
+  padding-left: 15px;
+  color: #435183;
+  /*background: rgba(255,255,255,.1);*/
+  padding: 10px;
+  border-left: 1px solid #435183;
+}
+
+.report-make-period {
+  padding-left: 15px;
+  color: #435183;
+  background: rgba(255,255,255,.1);
+  padding: 10px;
+  border-left: 1px solid #435183
 }

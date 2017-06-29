@@ -2841,15 +2841,15 @@ table.simple th,table.simple td {
 }
 
 table.simple tr:first-child td {
-    background: none;
+    background: #ebebeb;
 }
 
 table.simple tr:last-child td {
-    border: none;
+    background: #ebebeb;
 }
 
 table.simple tr:hover td {
-    background: none;
+    background: #ebebeb;
     color: inherit;
 }
 

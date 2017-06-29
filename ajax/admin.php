@@ -74,6 +74,10 @@ if($_GET['action']=='activity') {
   }
 }
 
+if($_GET['action']=='log') {
+
+    echo "Admin LOG";
+}
 
 if($_GET['action']=='crontab') {
   ?>

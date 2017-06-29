@@ -4,8 +4,9 @@
     <div class="">
       <h6>
         <span onClick="renderer('reports')" class="header_report_1 pointer" style="font-weight: bold; font-size: 14px; color: #435183;">Отчеты </span>&nbsp;&nbsp;&nbsp;
-        <span class="i_name_otchet" onClick="reportPoGruppe()"></span>
-        <span class="postroinnii_otshet">Отчет</span>
+        <span class="i_name_otchet" onClick="reportPoVsem()"></span>
+        <span class="i_name_otchet2" onClick="reportPoGruppe()"></span>
+        <span class="postroinnii_otshet"></span>
 
       </h6>
     </div>
@@ -29,14 +30,6 @@
             Построить отчет по всем найденным штрафам
             <img src="/images/exit-to-app-button.png" style="float: right; margin-top: 4px;" class="right-arrow-btn" width="14" alt="">
           </div>
-
-        </div>
-        <div class=""  style="padding: 5px 0;">
-          <div class="button-round" for="report3"  onClick="reportPoOtdelnim()" >
-            <img src="/images/bars-chart.png" alt="" class="colored-image" style="float: left;  margin-right: 10px; width: 22px;">
-            Построить отчет по отдельным автомобилям
-            <img src="/images/exit-to-app-button.png" style="float: right; margin-top: 4px;" class="right-arrow-btn" width="14" alt="">
-          </div>
         </div>
       </div>
     </div>
@@ -47,9 +40,9 @@
           <br/><br/>
           Отчет <span style="font-weight: bold; color: #435183;">по всем</span> найденным штрафам:<br/>
           - выводит все найденные неоплаченые штрафы по всем вашим транспортным средствам, позволяет отправить данные на печать или сохранить в формате Excell.
-          <br/><br/>
-          Отчет <span style="font-weight: bold; color: #435183;">по отдельным</span> автомобилям:<br/>
-          - позволяет выбрать только необходимые транспортные средства для построения отчета и выгрузки данных по штрафам
+<!--          <br/><br/>-->
+<!--          Отчет <span style="font-weight: bold; color: #435183;">по отдельным</span> автомобилям:<br/>-->
+<!--          - позволяет выбрать только необходимые транспортные средства для построения отчета и выгрузки данных по штрафам-->
 
         </div>
     </div>

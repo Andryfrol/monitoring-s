@@ -108,9 +108,9 @@
     } else {
       ?>
       <p style="padding-left: 20px;">
-        У вас еще не добавлены транспортные средства.<br/>
-        Вы можете создать группы транспорта для удобного построяния отчетов,<br/>
-        а так же для открытия доступа конкретных транспортных групп созданным менеджерам.
+        <br/>
+        У вас еще не добавлены транспортные средства, <span class="pointer" style="color: #435183; text-decoration: underline;" onClick="addTransport()">добавить транспорт</span><br/>
+        <br/>Вы можете создать группы транспорта для удобного построяния отчетов, <span class="pointer" style="color: #435183; text-decoration: underline;" onClick="addGroupTransport()">мои группы</span><br/>
       </p>
 
       <?

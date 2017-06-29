@@ -22,7 +22,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                       <div class="column one-third " style=" padding-bottom: 0px; margin-bottom: 0px; margin-top: 20px;">
                                         <div class="" style="padding: 5px 15px;">
                                         <div class="">
-                                          <h4 class="h1_main" style=" font-family: 'roboto'; font-weight:300;">Проверка штрафов ГИБДД</h4>
+                                          <h1 class="h1_main" style=" font-family: 'roboto'; font-weight:300;">Проверка штрафов ГИБДД</h1>
                                         </div>
                                         <div class="" style="display: inline-block; margin-right: 30px; margin-top: 13px;">
                                           <label for="sear1" style="cursor: pointer; font-weight: 400;  font-family: 'roboto';
@@ -48,6 +48,16 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                       </div>
                                       </div>
                                       <div class="column two-third" style="margin-bottom: 0px;">
+                                        <div>
+                                            <h4 class="h1_main" style=" font-family: 'roboto'; font-weight:300; padding-top: 50px;">
+                                                Официальная проверка штрафов по базам
+                                                ГИБДД, ГИС ГМП
+                                            </h4>
+                                            <ul>
+                                                <li></li>
+
+                                            </ul>
+                                        </div>
                                         <h4 style="opacity: 0;">Результаты поиска штрафов</h4>
                                           <iframe id="myIframe" style=" margin-left: -84px; margin-top: -28px; min-width: 1000px; overflow-x: hidden; height: 400px;" src=""></iframe>
                                       </div>
@@ -63,9 +73,9 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
 
 
                         <div class="section the_content no_content" >
-                            <div class="section_wrapper">
-                                <div class="the_content_wrapper"></div>
-                            </div>
+                            <?php
+                            include_once($_SERVER['DOCUMENT_ROOT']."/inc/logos-footer.php");
+                            ?>
                         </div>
                     </div>
                 </div>

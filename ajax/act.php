@@ -19,7 +19,7 @@ if($_GET['action']=='plateji') {
   $r_pay_history = mysql_query($q_pay_history);
   $n_pay_history = mysql_numrows($r_pay_history);
   ?>
-  <div style="margin-bottom: 5px;">
+  <div style="margin-bottom: 5px; font-weight: bold; color: #435183;">
     Платежи
   </div>
 
@@ -34,6 +34,10 @@ if($_GET['action']=='plateji') {
           <p><span style="font-size: 13px;"><?=$pay_history_date_dmy;?></span><br/>Пополнение баланса на <?=$pay_history_summa;?> руб.</p>
           <?
       }
+  } else {
+      ?>
+      <p style="margin-top: 20px;">Платежи не найдены</p>
+      <?
   }
 
 }
@@ -86,8 +90,6 @@ if($_GET['action']=='make_report_group') {
            };
         }
     }
-    // Берем по ним штрафы
-    //
 
     $q_new_blank_data = sprintf("SELECT * FROM new_blank_data WHERE sts_n IN (".$sts_list.") AND status = 1 AND dat_timestamp <=".$to." AND dat_timestamp >=".$from." ORDER BY dat_timestamp DESC");
 
@@ -96,7 +98,7 @@ if($_GET['action']=='make_report_group') {
 
     if ($n_new_blank_data > 0) {
       ?>
-      <div class="" style="border-bottom: 1px solid rgba(255,255,255,.1); border-top: 1px solid rgba(255,255,255,.1); border-right: 1px solid rgba(255,255,255,.1);">
+      <div class="" style="color: #435183; font-weight: bold; border-bottom: 1px solid rgba(255,255,255,.1); border-radius: 2px; background: #eceef1;">
           <div class="tdcell" style="width: 80px;">
             Дата
           </div>
@@ -155,7 +157,7 @@ if($_GET['action']=='make_report_group') {
 
             // Дата ! Сумма штрафов ! Гос номер ! Название авто ! Номер стс ! № пост ! Оплатить
             $new_blank_data_totalamount = ($new_blank_data_totalamount * 100)/100;
-            $total = $total + $new_blank_data_totalamount;
+            $total = $total + $new_blank_data_b_sum;
             // echo "string";
             // echo "~".$new_blank_data_totalamount."~".."~ ~".$new_blank_data_sts_n."~".$new_blank_data_l_unic_num_shtr."~Оплатить~";
             ?>
@@ -190,7 +192,7 @@ if($_GET['action']=='make_report_group') {
                    <?=$new_blank_data_l_unic_num_shtr;?>
                 </div>
                 <div class="tdcell" style="width: 80px; ">
-                  <a target="_blank" href="/оплатить-штраф?num=<?=$new_blank_data_l_unic_num_shtr?>&go=pay&summ=<?=$new_blank_data_b_sum;?>&summ2=<?=$new_blank_data_feesrv;?>" style="color: #c8c8c8;">Оплатить</a>
+                  <a class="go_to_pay" target="_blank" href="/оплатить-штраф?num=<?=$new_blank_data_l_unic_num_shtr?>&go=pay&summ=<?=$new_blank_data_b_sum;?>&summ2=<?=$new_blank_data_feesrv;?>">Оплатить</a>
                 </div>
               </div>
             <?
@@ -472,26 +474,19 @@ if($_GET['action']=='addgrouptransportsend') {
 
 if($_GET['action']=='addgrouptransport') {
 ?>
-<div class="" style="padding-left: 15px;">
+<div class="" style="background: #fff;">
 
     <div class="items_group">
-      <div class="column one-second" style="margin-bottom: 0px;">
-        <div class="">
-          <h6>
-              Добавление группы транспортных средств</h6>
-        </div>
-        <div class="">
-          <p>Название группы</p>
-          <input type="text" value="" id="grouptsname" placeholder="Название группы ТС" style="background: rgba(255,255,255,.2); padding: 7px 10px;">
-        </div>
-        <div class="disactivebtn" onClick="addGroupTransportTS()">
-          Добавить группу
-        </div>
-      </div>
-      <div class="column one-second" style="margin-bottom: 0px;">
-        <div class="">
-          <h6>Мои группы транспортных средств</h6>
-        </div>
+
+    <div class="" style="padding: 10px; background: #f0f2f5; margin-bottom: 25px; border-bottom: 1px solid #ebebeb;">
+        <h6 style="font-weight: 400; margin-bottom: 0px; font-size: 18px; color: #435183; padding: 2px; padding-left: 10px; ">Мои группы
+            <span title="Закрыть окно" style="font-family: 'Ubuntu'; cursor: pointer; border-radius: 0px;
+      float: right; padding-top: 0px; font-size: 14px; padding-left: 7px; min-width: 15px; min-height: 22px; background: #e04243; color: white;" onClick="closemodal()">
+          x
+      </span></h6>
+    </div>
+      <div class="column one" style="margin-bottom: 0px;">
+
         <?
         $q_transport_group = sprintf("SELECT * FROM transport_group WHERE user_id = '".$_SESSION['user_id']."' AND status='1' ORDER BY id DESC");
         $r_transport_group = mysql_query($q_transport_group);
@@ -507,10 +502,13 @@ if($_GET['action']=='addgrouptransport') {
                 ?>
                 <div class="" style="background: rgba(255,255,255,.2); font-weight: 300; padding: 5px; border: 1px solid rgba(255,255,255,.2); padding-left: 15px; padding-right: 10px; margin-bottom: 5px; border-radius: 50px; ">
 
-                  <span style="cursor: pointer;" onClick="changeGropuTransportBtn(<?=$transport_group_id;?>)"><?=$transport_group_name_group?></span>
-                  <div class="" style="float: right;">
+                  <span style="cursor: pointer;" id="groupName<?=$transport_group_id;?>">
+                      <?=$transport_group_name_group?>
+                  </span>
+
+                  <div class="uprelem<?=$transport_group_id;?>" style="float: right;">
                     <span style="margin-right: 15px; vertical-align: top;" class="pointer">
-                      <img src="/images/interface/change_trans_icon2.png" title="Редактировать" onClick="changeGropuTransportBtn(<?=$transport_group_id;?>)" alt="" style=" vertical-align: top;">
+                      <img src="/images/interface/change_trans_icon2.png" title="Редактировать" onClick="changeGropuTransportBtn(<?=$transport_group_id;?>,'<?=$transport_group_name_group?>')" alt="" style=" vertical-align: top;">
                     </span>
                     <span onClick="deletTransportGroup(<?=$transport_group_id;?>)" style="">
                       <img
@@ -519,7 +517,6 @@ if($_GET['action']=='addgrouptransport') {
                       style="cursor: pointer; float: right; padding-top: 4px; vertical-align: top; margin-top: -1px;"
                       alt="">
                     </span>
-
                   </div>
                   <div class="clear">
 
@@ -528,16 +525,23 @@ if($_GET['action']=='addgrouptransport') {
                 <?
             }
         } else {
-          echo "У вас нет ни одной группы транспортных средств";
+          // echo "<div style='padding-left: 10px;'>Чтобы создать группу нажмите <strong style='color: #435183; margin-left: 15px;'>Добавить</strong></div>";
         }
         ?>
+        <div class="addercontanergroup">
 
+        </div>
+        <div class="addnewtsgroup" onclick="addGroupNew()">
+            Создать группу
+        </div>
+        <div class="clear"></div>
 
       </div>
     </div>
 
 
 </div>
+    <div class="clear"></div>
 <?
 }
 
@@ -634,8 +638,9 @@ if($_GET['action']=='administration') {
         <span style="margin-left: 15px;" class="pointer" onclick="adminHelpDesk()">HDesk</span>
         <span style="margin-left: 15px;" class="pointer" onclick="adminMsg()">Написать</span>
         <span style="margin-left: 15px;" class="pointer" onclick="todoList()">TODO</span>
-    
-        <span style="margin-left: 15px;" class="pointer" onClick="adminAddMoney()">Add $</span>
+          <span style="margin-left: 15px;" class="pointer" onclick="adminLog()">LOG</span>
+
+          <span style="margin-left: 15px;" class="pointer" onClick="adminAddMoney()">Add $</span>
       </div>
       <div class="adminchanger">
 

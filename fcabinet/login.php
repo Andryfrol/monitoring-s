@@ -92,9 +92,9 @@
 
 
                         <div class="section the_content no_content" style="">
-                            <div class="section_wrapper">
-                                <div class="the_content_wrapper"></div>
-                            </div>
+                            <?php
+                            include_once($_SERVER['DOCUMENT_ROOT']."/inc/logos-footer.php");
+                            ?>
                         </div>
                     </div>
                 </div>

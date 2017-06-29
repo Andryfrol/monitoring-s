@@ -57,7 +57,11 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
             </div>
 
         </div>
+
     </div>
+    <?php
+    include_once($_SERVER['DOCUMENT_ROOT']."/inc/logos-footer.php");
+    ?>
 </div>
 
 <?

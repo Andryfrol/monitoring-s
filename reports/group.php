@@ -5,7 +5,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
 
 // Проверить существование групп автотранспорта
 ?>
-<div class="" style="padding-left: 15px; color: #c8c8c8; background: rgba(255,255,255,.1); padding: 10px; border-left: 2px solid #ddd0b2">
+<div class="text-report-ll">
     Выбирите группы для построения отчета
 </div>
 <div class="" style="margin-top: 17px; padding-left: 20px;">
@@ -20,7 +20,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
           $transport_group_id = htmlspecialchars(mysql_result($r_transport_group, $i, "transport_group.id"));
           $transport_group_name_group = htmlspecialchars(mysql_result($r_transport_group, $i, "transport_group.name_group"));
           ?>
-          <label for="group<?=$transport_group_id;?>" style="font-weight: 400; vertical-align: top; font-family: 'roboto'; color: #c8c8c8;">
+          <label for="group<?=$transport_group_id;?>" style="font-weight: 400; vertical-align: top; font-family: 'roboto'; color: #444; cursor: pointer;">
           <input type="checkbox" style="width: 16px; height: 16px;" name="" id="group<?=$transport_group_id;?>" onclick="groups_id_array('<?=$transport_group_id;?>')">
           <?=$transport_group_name_group;?>
           </label>
@@ -34,7 +34,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
 <splitter>
 
 <div class="" style="margin-top: 42px; padding-left: 0px; margin-left: -3px;">
-  <div class="" style="padding-left: 15px; color: #c8c8c8; background: rgba(255,255,255,.1); padding: 10px; border-left: 2px solid #ddd0b2">
+  <div class="report-make-period">
       Укажите период отчета
   </div>
 
@@ -51,7 +51,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
 
 
 </div>
-<div class="disactivebtn" style="margin-top: 20px; margin-left:0px;" onClick="makeReportGroup()">
+<div class="addstbtn pointer" style="margin-top: 20px; margin-left: 200px;" onClick="makeReportGroup()">
   Построить отчет
 </div>
 

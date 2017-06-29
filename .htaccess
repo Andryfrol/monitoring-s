@@ -23,6 +23,8 @@ RewriteRule ^обработка-платежа/?$ /gobank.php
 RewriteRule ^в-кабинет/?$ /tocabinet.php
 
 
+RewriteRule ^демо-доступ/?$ /godemo.php
+
 
 RewriteRule ^export/([a-zA-Z0-9_-]+)?$ /php/excell.php?hash=$1
 RewriteRule ^printer/([a-zA-Z0-9_-]+)?$ /php/printer.php?hash=$1

@@ -5,14 +5,14 @@ include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
 ?>
 <div class="" style="padding-right: 10px; padding-left: 10px;">
   <h4 style="font-family: 'roboto'; display: inline-block;">Отчет по всем найденным штрафам</h4>
-  <span onclick="exportDataToExcell('all')" style="float: right; vertical-align: top;   margin-right: 10px; cursor: pointer;  line-height: 1.5;"><img src="/images/export_excell.gif" alt=""><small style="padding-left: 5px; font-size: 13px;  vertical-align: top;">Экспорт в Excell</small></span>
+  <span onclick="exportDataToExcell('all')" style="float: right; vertical-align: top;   margin-right: 10px; cursor: pointer;  line-height: 1.5;"><img src="/images/export_excell.gif" alt=""><small style="padding-left: 5px; font-size: 13px; color: #435183; vertical-align: top;">Экспорт в Excell</small></span>
   <a href="/printer/all" target="_blank" style="color: #e8e8e8;">
     <span  style="float: right; vertical-align: top;  margin-right: 20px; cursor: pointer;   line-height: 1.5;">
-      <img src="/images/printer_icon.png" alt=""><small style="padding-left: 5px; font-size: 13px; vertical-align: top;">Печать</small>
+      <img src="/images/printer_icon.png" alt=""><small style="padding-left: 5px; font-size: 13px; vertical-align: top; color: #435183;">Печать</small>
     </span>
   </a>
 </div>
-<div class="" style="padding: 10px;">
+<div class="" style="padding: 0 10px;">
 
   <div class="">
     <!-- <div class="">
@@ -50,7 +50,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
            // Получаем данные по штрафам
 
 
-          $q_new_blank_data = sprintf("SELECT * FROM new_blank_data WHERE sts_n IN ".$sts_nums." ORDER BY dat_timestamp DESC");
+          $q_new_blank_data = sprintf("SELECT * FROM new_blank_data WHERE sts_n IN ".$sts_nums." AND status=1 ORDER BY dat_timestamp DESC");
           $r_new_blank_data = mysql_query($q_new_blank_data);
           $n_new_blank_data = mysql_numrows($r_new_blank_data);
 
@@ -64,8 +64,8 @@ include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
 
               <div style='text-align: right;'>
 
-                <div class="" style="float: left; font-weight: bold; padding: 10px 0; cursor: default;">
-                  Количество найденных штрафов <span style="padding: 10px; color: #dccfb1; cursor: default;"><?=$n_new_blank_data;?></span>
+                <div class="" style="float: left; font-weight: bold; padding: 10px 0; cursor: default; color: #435183;">
+                  Количество найденных штрафов <span style="padding: 10px; cursor: default;"><?=$n_new_blank_data;?></span>
                 </div>
 
                 <div class="clear">
@@ -73,7 +73,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
                 </div>
               </div>
               <div class="" style="border-bottom: 1px solid rgba(255,255,255,.1);"></div>
-              <div class="" style="border-bottom: 1px solid rgba(255,255,255,.1); border-right: 1px solid rgba(255,255,255,.1);">
+              <div class="" style="font-weight: bold; color: #435183; border-bottom: 1px solid rgba(255,255,255,.1); border-radius: 2px; background: #eceef1;">
                 <div class="tdcell" style="width: 80px;">
                   Дата
                 </div>
@@ -144,7 +144,13 @@ include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
                       <?=$new_blank_data_b_sum;?> руб.
                     </div>
                     <div class="tdcell">
-                      <?=$get_group_trans_by_user_id[$gos_and_grup_id[$new_blank_data_sts_n][0]];?>
+                        <?php
+                        if($get_group_trans_by_user_id[$gos_and_grup_id[$new_blank_data_sts_n][0]]) {
+                            echo $get_group_trans_by_user_id[$gos_and_grup_id[$new_blank_data_sts_n][0]];
+                        } else {
+                            echo 'Не опраделена';
+                        };
+                        ?>
                     </div>
                     <div class="tdcell">
                       <?=$new_blank_data_sts_n;?>
@@ -153,7 +159,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/php/fns.php");
                       <?=$new_blank_data_l_unic_num_shtr;?>
                     </div>
                     <div class="tdcell" style="width: 80px;">
-                      <a target="_blank" href="/оплатить-штраф?num=<?=$new_blank_data_l_unic_num_shtr;?>&go=pay&summ=<?=$new_blank_data_b_sum;?>&summ2=<?=$new_blank_data_feesrv;?>" style="color: #c8c8c8;">Оплатить</a>
+                      <a class="go_to_pay" target="_blank" href="/оплатить-штраф?num=<?=$new_blank_data_l_unic_num_shtr;?>&go=pay&summ=<?=$new_blank_data_b_sum;?>&summ2=<?=$new_blank_data_feesrv;?>">Оплатить</a>
                     </div>
                   </div>
 

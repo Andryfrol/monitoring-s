@@ -303,6 +303,28 @@ function adminMailer() {
   });
 }
 
+function adminLog() {
+    var action = 'log';
+    var data = {
+        'nodata' : 1
+    };
+    jQuery.ajax({
+        type: "POST",
+        url: "/ajax/admin.php?action="+action,
+        data : data,
+        beforeSend: function(html) {
+
+        },
+        success: function(html) {
+            jQuery('.adminchanger').html(html);
+        },
+        error: function(html) {
+
+        }
+    });
+}
+
+
 function adminCrons() {
   var action = 'crontab';
   var data = {

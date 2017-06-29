@@ -232,7 +232,7 @@ class _API
 		curl_setopt($ch,CURLOPT_POSTFIELDS,$dat);	// массив, содержащий данные для HTTP POST запроса
 
 		$res=curl_exec($ch);
-    $curlErr=curl_errno($ch);
+        $curlErr=curl_errno($ch);
 		curl_close($ch);
 		if($curlErr!=0||$res=="")
 		{	$ret['err']=-1;
@@ -267,44 +267,51 @@ if ($n_sel > 0) {
     for ($i = 0; $i < $n_sel; $i++) {
         $dat['sts'] = htmlspecialchars(mysql_result($sel, $i, "transport.sts"))."<br/>";
         $ret = $api->sendQUERY($dat);
-        foreach ($ret['l'] as $blank) {
-            $n_sts = $dat['sts'];
-            $sum = $blank['sum'];
-            $addinfo = $blank['addinfo'];
-            $dat_str = $blank['dat'];
-            $shtr_time = strtotime($dat_str);
-            $type = (int)$blank['type'];
-            $feesrv = $blank['feesrv'];
-            $payeridentifier = $blank['PAYERIDENTIFIER'];
-            $articlecode = $blank['ARTICLECODE'];
-            $location = $blank['LOCATION'];
-            $discountsize = $blank['DISCOUNTSIZE'];
-            $discountdate = $blank['DISCOUNTDATE'];
-            $totalamount = $blank['TOTALAMOUNT'];
-            $ispaid = $blank['ISPAID'];
-            $bank = $blank['BANK']; // Массив данных банка получателя
-            $bank_soiname = $bank['SOINAME'];
-            $bank_inn = $bank['INN'];
-            $bank_kpp = $bank['KPP'];
-            $bank_acc = $bank['ACC'];
-            $bank_bankname = $bank['BANKNAME'];
-            $bank_bik = $bank['BIK'];
+        $object = json_decode(json_encode($ret), FALSE);
+        $status_insert = "";
+        if(!$object->l) {
+            // не найдено штрафов по номеру стс
+            $update_all_for_sts = "UPDATE new_blank_data SET status=0 WHERE sts_n='".$dat['sts']."'";
+            $resUpdate = mysql_query($update_all_for_sts);
+        } else {
+            if($object->err == 0) {
+                foreach ($ret['l'] as $blank) {
+                    $n_sts = $dat['sts'];
+                    $sum = $blank['sum'];
+                    $addinfo = $blank['addinfo'];
+                    $dat_str = $blank['dat'];
+                    $shtr_time = strtotime($dat_str);
+                    $type = (int)$blank['type'];
+                    $feesrv = $blank['feesrv'];
+                    $payeridentifier = $blank['PAYERIDENTIFIER'];
+                    $articlecode = $blank['ARTICLECODE'];
+                    $location = $blank['LOCATION'];
+                    $discountsize = $blank['DISCOUNTSIZE'];
+                    $discountdate = $blank['DISCOUNTDATE'];
+                    $totalamount = $blank['TOTALAMOUNT'];
+                    $ispaid = $blank['ISPAID'];
+                    $bank = $blank['BANK']; // Массив данных банка получателя
+                    $bank_soiname = $bank['SOINAME'];
+                    $bank_inn = $bank['INN'];
+                    $bank_kpp = $bank['KPP'];
+                    $bank_acc = $bank['ACC'];
+                    $bank_bankname = $bank['BANKNAME'];
+                    $bank_bik = $bank['BIK'];
+                    $bank_purpose = $bank['PURPOSE'];
+                    $l_unic_num_shtr = explode("№", $bank_purpose);
+                    $l_unic_num_shtr = explode(" ", $l_unic_num_shtr[1]);
+                    $l_unic_num_shtr = explode(";", $l_unic_num_shtr[0]);
+                    $l_unic_num_shtr = $l_unic_num_shtr[0];
+                    $bank_username = $bank['USERNAME'];
+                    $bank_kbk = $bank['KBK'];
+                    $bank_oktmo = $bank['OKTMO'];
+                    $bank_sign = $bank['SIGN'];
+                    $bank_billdate  = $bank['BILLDATE'];
+                    $insert_new_blank = "INSERT INTO new_blank_data (dat_timestamp,sts_n,time_zadachi,id_zadachi,b_sum,addinfo,dat,type,feesrv,payeridentifier,articlecode,location,discountsize,discountdate,totalamount,ispaid,bank_soiname,bank_inn,bank_kpp,bank_acc,bank_bankname,bank_bik,bank_purpose,bank_username,bank_kbk,bank_oktmo,bank_sign,bank_billdate,l_unic_num_shtr) VALUES ('".$shtr_time."','".$n_sts."','".$time_zadachi."','".$id_zadachi."','".$sum."','".$addinfo."','".$dat_str."','".$type."','".$feesrv."','".$payeridentifier."','".$articlecode."','".$location."','".$discountsize."','".$discountdate."','".$totalamount."','".$ispaid."','".$bank_soiname."','".$bank_inn."','".$bank_kpp."','".$bank_acc."','".$bank_bankname."','".$bank_bik."','".$bank_purpose."','".$bank_username."','".$bank_kbk."','".$bank_oktmo."','".$bank_sign."','".$bank_billdate."','".$l_unic_num_shtr."') ON DUPLICATE KEY UPDATE dat_timestamp='".$shtr_time."', l_unic_num_shtr='".$l_unic_num_shtr."', time_zadachi='".$time_zadachi."'";
+                    $ins = mysql_query($insert_new_blank);
 
-            $bank_purpose = $bank['PURPOSE'];
-
-            $l_unic_num_shtr = explode("№", $bank_purpose);
-            $l_unic_num_shtr = explode(" ", $l_unic_num_shtr[1]);
-            $l_unic_num_shtr = explode(";", $l_unic_num_shtr[0]);
-            $l_unic_num_shtr = $l_unic_num_shtr[0];
-
-            $bank_username = $bank['USERNAME'];
-            $bank_kbk = $bank['KBK'];
-            $bank_oktmo = $bank['OKTMO'];
-            $bank_sign = $bank['SIGN'];
-            $bank_billdate  = $bank['BILLDATE'];
-            $insert_new_blank = "INSERT INTO new_blank_data (dat_timestamp,sts_n,time_zadachi,id_zadachi,b_sum,addinfo,dat,type,feesrv,payeridentifier,articlecode,location,discountsize,discountdate,totalamount,ispaid,bank_soiname,bank_inn,bank_kpp,bank_acc,bank_bankname,bank_bik,bank_purpose,bank_username,bank_kbk,bank_oktmo,bank_sign,bank_billdate,l_unic_num_shtr) VALUES ('".$shtr_time."','".$n_sts."','".$time_zadachi."','".$id_zadachi."','".$sum."','".$addinfo."','".$dat_str."','".$type."','".$feesrv."','".$payeridentifier."','".$articlecode."','".$location."','".$discountsize."','".$discountdate."','".$totalamount."','".$ispaid."','".$bank_soiname."','".$bank_inn."','".$bank_kpp."','".$bank_acc."','".$bank_bankname."','".$bank_bik."','".$bank_purpose."','".$bank_username."','".$bank_kbk."','".$bank_oktmo."','".$bank_sign."','".$bank_billdate."','".$l_unic_num_shtr."') ON DUPLICATE KEY UPDATE dat_timestamp='".$shtr_time."', l_unic_num_shtr='".$l_unic_num_shtr."', time_zadachi='".$time_zadachi."'";
-            $ins = mysql_query($insert_new_blank);
-
+                };
+            }
         }
     }
 }

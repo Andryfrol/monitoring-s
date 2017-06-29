@@ -89,7 +89,7 @@ function hidethismsg() {
 }
 
 function saveGroupName(id_group) {
-  var newName = jQuery('.group_id_'+id_group).val();
+  var newName = jQuery('#newnamegroup').val();
   var action = 'saveGroupName';
   var data = {
     'newName' : newName,
@@ -112,28 +112,32 @@ function saveGroupName(id_group) {
 
 }
 
-function changeGropuTransportBtn(id_group) {
+function changeGropuTransportBtn(id_group,name) {
   // alert('Редактор групп транспорта');
-  var action = 'changeGropuTransportBtn';
-  var data = {
-    'id_group' : id_group
-  };
-  jQuery.ajax({
-      type: "POST",
-      url: "/ajax/act.php?action="+action,
-      data : data,
-      beforeSend: function(html) {
 
-      },
-      success: function(html) {
-        jQuery('.trans_modal').css('display','block');
-        jQuery('.transportchanger').css('display','none');
-        jQuery('.trans_modal').html(html);
-      },
-      error: function(html) {
-
-      }
-  });
+    jQuery('.uprelem'+id_group).css('display','none');
+    jQuery('#groupName'+id_group).html('<input id="newnamegroup" type="text" style="padding: 6px; color: #444; margin: 0; display: inline-block;" value="'+name+'"/><span class="saverupdgr" onClick="saveGroupName('+id_group+')">Сохранить</span>');
+  // var action = 'changeGropuTransportBtn';
+  // var data = {
+  //   'id_group' : id_group
+  // };
+  // jQuery.ajax({
+  //     type: "POST",
+  //     url: "/ajax/act.php?action="+action,
+  //     data : data,
+  //     beforeSend: function(html) {
+  //
+  //     },
+  //     success: function(html) {
+  //
+  //         // jQuery('.trans_modal').css('display','block');
+  //       // jQuery('.transportchanger').css('display','none');
+  //       // jQuery('.trans_modal').html(html);
+  //     },
+  //     error: function(html) {
+  //
+  //     }
+  // });
 }
 
 function addGroupTransport() {
@@ -150,15 +154,20 @@ function addGroupTransport() {
 
       },
       success: function(html) {
-        jQuery('#mt_icon3').css('opacity','1');
-        jQuery('#mt_icon1').css('opacity','0');
-        jQuery('#addtsspan').css('color','#435183');
-        jQuery('#f1trmenu').css('color', '#a8a9ab');
-        jQuery('#addtsicon').css('opacity','0');
-        jQuery('#tx_3uprgr').css('color','#ddd0b2');
-        jQuery('.transportchanger').html(html);
-        jQuery('.trans_modal').css('display','none');
-        jQuery('.transportchanger').css('display','block');
+        // делаем модально окно
+          jQuery('#modalcontaner').css('display', 'block');
+          var modalwindow = "<div class='popup_box_container'></div>";
+          jQuery('#modalcontaner').html(modalwindow);
+          jQuery('.popup_box_container').html(html);
+        // jQuery('#mt_icon3').css('opacity','1');
+        // jQuery('#mt_icon1').css('opacity','0');
+        // jQuery('#addtsspan').css('color','#435183');
+        // jQuery('#f1trmenu').css('color', '#a8a9ab');
+        // jQuery('#addtsicon').css('opacity','0');
+        // jQuery('#tx_3uprgr').css('color','#ddd0b2');
+        // jQuery('.transportchanger').html(html);
+        // jQuery('.trans_modal').css('display','none');
+        // jQuery('.transportchanger').css('display','block');
       },
       error: function(html) {
 
@@ -827,7 +836,7 @@ function makeReportGroup() {
   var groups_array = ''; // Выбранные группы для отчета
   jQuery('.cach_report_step_2').css('display','none');
   jQuery('.postroinnii_otshet').css('display','inline-block');
-  jQuery('.i_name_otchet .gold').css('color', 'rgb(168, 169, 171)');
+  jQuery('.i_name_otchet .gold').css('color', '435183');
 
   if(!groups_report_array.length){
    console.log('Выбирите группу!'+groups_report_array.length);
@@ -905,10 +914,10 @@ function reportPoGruppe() {
       },
       success: function(html) {
         // Отображаем название меню
-        jQuery('.i_name_otchet').css('display', 'inline-block');
-        jQuery('.i_name_otchet').html('<span class="gold">Отчет по группе транспортных средств</span>')
+        jQuery('.i_name_otchet2').css('display', 'inline-block');
+        jQuery('.i_name_otchet2').html('<span class="gold">Отчет по группе транспортных средств</span>')
         jQuery('.i_report_block_1').css('display', 'none');
-        jQuery('.header_report_1').css('color','#a8a9ab');
+        jQuery('.header_report_1').css('color','#435183');
         var sucs = html.split('<splitter>')
         jQuery('.cach_report_step_2 .l').html(sucs[0]);
         jQuery('.cach_report_step_2 .r').html(sucs[1]);
@@ -1012,4 +1021,11 @@ function deletTransportById(id_transport) {
 
 function sengMsgHelpdesc() {
   alert('send message');
+}
+
+function addGroupNew() {
+
+    jQuery('.addercontanergroup').html('<div class="flight" style="padding-left: 15px; padding-bottom: 3px; border-top: 1px solid #ebebeb; padding-top: 7px; margin-top: 10px; color: #435183;">Имя группы</div><input type="text" id="grouptsname" class="newgropname" placeholder="Например Грузовики">' +
+        '<div class="addnewtsgroupsaver" onClick="addGroupTransportTS()">Добавить</div><div class="clear"></div>');
+    jQuery('.addnewtsgroup').css('display','none');
 }

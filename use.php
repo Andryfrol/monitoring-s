@@ -67,9 +67,9 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
 
 
                         <div class="section the_content no_content" >
-                            <div class="section_wrapper">
-                                <div class="the_content_wrapper"></div>
-                            </div>
+                            <?php
+                            include_once($_SERVER['DOCUMENT_ROOT']."/inc/logos-footer.php");
+                            ?>
                         </div>
                     </div>
                 </div>

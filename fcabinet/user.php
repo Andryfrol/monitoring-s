@@ -111,7 +111,7 @@
                                                  // Получаем данные по штрафам
 
 
-                                                $q_new_blank_data = sprintf("SELECT * FROM new_blank_data WHERE sts_n IN ".$sts_nums." ORDER BY dat_timestamp DESC");
+                                                $q_new_blank_data = sprintf("SELECT * FROM new_blank_data WHERE sts_n IN ".$sts_nums." AND status=1 ORDER BY dat_timestamp DESC");
                                                 $r_new_blank_data = mysql_query($q_new_blank_data);
                                                 $n_new_blank_data = mysql_numrows($r_new_blank_data);
 
@@ -224,7 +224,13 @@
                                                             <?=$new_blank_data_b_sum;?> руб.
                                                           </div>
                                                           <div class="tdcell">
-                                                            <?=$get_group_trans_by_user_id[$gos_and_grup_id[$new_blank_data_sts_n][0]];?>
+                                                              <?php
+                                                              if($get_group_trans_by_user_id[$gos_and_grup_id[$new_blank_data_sts_n][0]]) {
+                                                                  echo $get_group_trans_by_user_id[$gos_and_grup_id[$new_blank_data_sts_n][0]];
+                                                              } else {
+                                                                  echo 'Не опраделена';
+                                                              };
+                                                              ?>
                                                           </div>
                                                           <div class="tdcell">
                                                             <?=$new_blank_data_sts_n;?>

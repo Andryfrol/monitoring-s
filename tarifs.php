@@ -29,7 +29,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                     </div>
                                     <div class="tarifprice" style="border-left: 1px solid rgba(140, 156, 172, 0.47);
     border-right: 1px solid rgba(140, 156, 172, 0.47); border-bottom: 1px solid rgba(140, 156, 172, 0.47);">
-                                      50 руб./мес.
+                                      10 руб. в мес за 1 авто
                                     </div>
                                     <div class="tarifstr">
                                       до 30 машин
@@ -60,10 +60,10 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                     </div>
                                     <div class="tarifprice" style="border-left: 1px solid rgba(140, 156, 172, 0.47);
     border-right: 1px solid rgba(140, 156, 172, 0.47); border-bottom: 1px solid rgba(140, 156, 172, 0.47);">
-                                      100 руб./мес.
+                                        9 руб. в мес за 1 авто
                                     </div>
                                     <div class="tarifstr">
-                                      до 100 машин
+                                      до 50 машин
                                     </div>
                                     <div class="tarifstr">
                                       Экспорт данных
@@ -86,10 +86,10 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                     </div>
                                     <div class="tarifprice" style="border-left: 1px solid rgba(140, 156, 172, 0.47);
     border-right: 1px solid rgba(140, 156, 172, 0.47); border-bottom: 1px solid rgba(140, 156, 172, 0.47);">
-                                      150 руб./мес.
+                                        8 руб. в мес за 1 авто
                                     </div>
                                     <div class="tarifstr">
-                                      до 200 машин
+                                      до 100 машин
                                     </div>
                                     <div class="tarifstr">
                                       Экспорт данных
@@ -112,7 +112,7 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                     </div>
                                     <div class="tarifprice" style="border-left: 1px solid rgba(140, 156, 172, 0.47);
     border-right: 1px solid rgba(140, 156, 172, 0.47); border-bottom: 1px solid rgba(140, 156, 172, 0.47);">
-                                      250 руб./мес
+                                        5 руб. в мес за 1 авто
                                     </div>
                                     <div class="tarifstr">
                                       до 500 машин
@@ -131,14 +131,14 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                 </div>
                               </div>
                             <div class="" style="color: #444; cursor: default; font-size: 18px; font-family: 'roboto'; padding-top: 20px; font-weight:300;">
-                              Ознакомительное использование сервиса доступно в течении 14 дней после регистрации.
+                              Безпланое ознакомительное использование сервиса доступно в течении 14 дней после регистрации.
                             </div>
                             </div>
                         </div>
                         <div class="section the_content no_content" >
-                            <div class="section_wrapper">
-                                <div class="the_content_wrapper"></div>
-                            </div>
+                            <?php
+                            include_once($_SERVER['DOCUMENT_ROOT']."/inc/logos-footer.php");
+                            ?>
                         </div>
                     </div>
                 </div>

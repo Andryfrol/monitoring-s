@@ -18,9 +18,9 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                     <div class="column  one-second">
                                         <div class="column_attr ">
                                             <div style="border-right: 2px solid #fff; padding: 20px 8% 0px 8%; margin-right: -2%;">
-                                                <div><h1 class="h1_main">Проверить штрафы ГИБДД</h1></div>
+                                                <div><h1 class="h1_main">Проверка штрафов ГИБДД</h1></div>
                                                 <div>
-                                                    <div>Введите № свидетельства о регистрации ТС</div>
+                                                    <div>Введите серию и номер СТС (без пробелов)</div>
                                                     <div>
                                                         <input id="sv-vo" type="text" placeholder="Введите серию и номер СТС (без пробелов)"/>
                                                         <div id="searcher-fine" onclick="classes.openSearchFine()">Проверить</div>
@@ -29,7 +29,9 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                             </div>
                                             <div style="padding-left: 50px;">
                                                 <div><h2 class="h1_main">Демо доступ к личному кабинету</h2></div>
-                                                <div class="bly-btn">Открыть демоверсию</div>
+                                                <a href="/демо-доступ" target="_blank">
+                                                    <div class="bly-btn">Открыть демоверсию</div>
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -113,14 +115,9 @@ include_once($_SERVER['DOCUMENT_ROOT']."/inc/header.inc.php");
                                 </div>
                             </div>
                         </div>
-                        <div style="background: #fff; margin-top: 0px;  padding-left: 80px;">
-                            <a href="http://www.gibdd.ru/" target="_blank">
-                                <img src="/images/logo-gibdd.png" width="40" style="margin-right: 20px;"/>
-                            </a>
-                            <a href="http://www.visa.com.ru" target="_blank">
-                                <img src="https://themeshop.in/assets/img/site/verified-by-visa.png" width="60" />
-                            </a>
-                        </div>
+                        <?php
+                        include_once($_SERVER['DOCUMENT_ROOT']."/inc/logos-footer.php");
+                        ?>
                     </div>
 
                 </div>
